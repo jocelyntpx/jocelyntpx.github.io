@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,7 @@
       <workItem from="1590819437659" duration="1160000" />
       <workItem from="1590820806765" duration="265000" />
       <workItem from="1591015406710" duration="1483000" />
-      <workItem from="1591117725416" duration="1506000" />
+      <workItem from="1591117725416" duration="1987000" />
     </task>
     <servers />
   </component>
