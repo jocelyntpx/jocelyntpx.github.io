@@ -15,10 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url
 from . import views
+from django.contrib import admin
+from django.contrib.auth import views as auth_views
+from django.urls import path, include
+
 
 
 urlpatterns = [
 	url(r'^$',views.index,name='index'),
 	url(r'^add_user/$',views.addUser,name='add_user'),
 	url(r'^add_user_form_submission/$',views.add_user_form_submission,name='add_user_form_submission'),
+    url(r'^sign_in/$',auth_views.LoginView.as_view(template_name='nusmerch/login.html'),name='sign_in'),
+    url(r'^logged_in/$',views.logged_in,name='logged_in'),
 ]

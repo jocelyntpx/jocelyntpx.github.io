@@ -21,4 +21,5 @@ urlpatterns = [
 	url(r'^$',views.index,name='index'),
 	url(r'^add_user/$',views.addUser,name='add_user'),
 	url(r'^add_user_form_submission/$',views.add_user_form_submission,name='add_user_form_submission'),
+    url(r'^sign_in/$',views.sign_in,name='sign_in'),
 ]

@@ -1,6 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import userInfo
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
+
 
 # Create your views here.
 def index(request):
@@ -20,4 +27,24 @@ def add_user_form_submission(request):
 
 	user_info = userInfo(user_name=user_name,user_number=user_number,user_email=user_email,faculty=faculty,user_password=user_password,user_repeatpass=user_repeatpass)
 	user_info.save()
+	messages.success(request,'Account created successfully') 
 	return render(request,"nusmerch/signup.html")
+
+def sign_in(request):
+	return render(request,"nusmerch/login.html")
+
+def sign_in_form(request):
+	if request.method == 'POST':
+		form = UserRegistrationForm(request.POST)
+		if form.is_valid():
+			# log in user
+			form.save()
+			user = form.cleaned_data.get('email')
+			messages.success(request,'Account created successfully for {user_name}:')
+			return redirect('nusmerch/index.html')
+	else:
+		form = AuthenticationForm()
+	return render(request,'nusmerch/login.html',{'form':form})
+
+def logged_in(request):
+	return render(request,"nusmerch/loggedin.html")

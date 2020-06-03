@@ -20,3 +20,6 @@ def add_user_form_submission(request):
 	user_info = userInfo(user_name=user_name,user_number=user_number,user_email=user_email,faculty =faculty,user_password=user_password)
 	user_info.save()
 	return render(request,"nusmerch/signup.html")
+
+def sign_in(request):
+	return render(request,"nusmerch/login.html")
