@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from .models import userInfo
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -42,18 +41,21 @@ def elements_page(request):
 def sign_in(request):
 	return render(request,"nusmerch/login.html")
 
-def sign_in_form(request):
+
+""" def sign_in_form(request):
 	if request.method == 'POST':
-		form = UserRegistrationForm(request.POST)
+		form = UserCreationForm(request.POST)
 		if form.is_valid():
 			# log in user
 			form.save()
 			user = form.cleaned_data.get('email')
 			messages.success(request,'Account created successfully for {user_name}:')
-			return redirect('nusmerch/index.html')
+			return redirect('nusmerch/loggedin.html')
 	else:
-		form = AuthenticationForm()
-	return render(request,'nusmerch/login.html',{'form':form})
+		form = UserCreationForm()
+	return render(request,'nusmerch/login.html',{'form':form}) 
+"""
+
 
 def logged_in(request):
 	return render(request,"nusmerch/loggedin.html")

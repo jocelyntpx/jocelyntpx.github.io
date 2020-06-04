@@ -20,32 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/signupsuccessful.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/loggedin.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/loggedin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0002_movieinfo_movie_release_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0003_movieinfo_movie_detail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0004_movieinfo_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0005_auto_20200529_1723.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0006_auto_20200529_1751.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/templates/nusmerch/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/templates/nusmerch/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/templates/nusmerch/signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -121,7 +102,7 @@
       <workItem from="1591015406710" duration="1483000" />
       <workItem from="1591117725416" duration="2797000" />
       <workItem from="1591123536613" duration="466000" />
-      <workItem from="1591257707373" duration="1848000" />
+      <workItem from="1591257707373" duration="6629000" />
     </task>
     <servers />
   </component>
@@ -139,5 +120,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="704" y="33" key="#nusmerchd" timestamp="1591263407953">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="704" y="33" key="#nusmerchd/0.23.1440.809@0.23.1440.809" timestamp="1591263407953" />
   </component>
 </project>
