@@ -19,11 +19,45 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="" />
+    <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/signupsuccessful.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/elements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0002_movieinfo_movie_release_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0003_movieinfo_movie_detail.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0004_movieinfo_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0005_auto_20200529_1723.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/0006_auto_20200529_1751.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/templates/nusmerch/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/templates/nusmerch/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/templates/nusmerch/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerchd/nusmerch/views.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,9 +69,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -85,7 +119,9 @@
       <workItem from="1590819437659" duration="1160000" />
       <workItem from="1590820806765" duration="265000" />
       <workItem from="1591015406710" duration="1483000" />
-      <workItem from="1591117725416" duration="2369000" />
+      <workItem from="1591117725416" duration="2797000" />
+      <workItem from="1591123536613" duration="466000" />
+      <workItem from="1591257707373" duration="1848000" />
     </task>
     <servers />
   </component>

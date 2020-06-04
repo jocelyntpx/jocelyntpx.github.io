@@ -28,7 +28,16 @@ def add_user_form_submission(request):
 	user_info = userInfo(user_name=user_name,user_number=user_number,user_email=user_email,faculty=faculty,user_password=user_password,user_repeatpass=user_repeatpass)
 	user_info.save()
 	messages.success(request,'Account created successfully') 
-	return render(request,"nusmerch/signup.html")
+	return render(request,"nusmerch/signupsuccessful.html")
+
+def home_page(request):
+	return render(request, "nusmerch/index.html")
+
+def about_page(request):
+	return render(request, "nusmerch/generic.html")
+
+def elements_page(request):
+	return render(request, "nusmerch/elements.html")
 
 def sign_in(request):
 	return render(request,"nusmerch/login.html")

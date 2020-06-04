@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<title>NUSMERCH</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="cover styling/assets/css/main.css" />
+		<link rel="stylesheet" href="{% static 'cover styling/assets/css/main.css' %}" />
 	</head>
 	<body class="subpage">
 
@@ -15,16 +16,16 @@
 				</nav>
 				<a href="index.html" class="logo">NUSMERCH</a>
 				<nav class="right">
-					<a href="Sign Up & Login/login.html" class="button alt">Log in</a>
+					<a href="/sign_in/" class="button alt">Log in</a>
 				</nav>
 			</header>
 
 		<!-- Menu -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">About</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li><a href="/home_page/">Home</a></li>
+					<li><a href="/about_page/">About</a></li>
+					<li><a href="/elements_page/">Elements</a></li>
 				</ul>
 				<ul class="actions vertical">
 					<li><a href="#" class="button fit">Login</a></li>
@@ -470,11 +471,11 @@ print 'It took ' + i + ' iterations to sort the deck.';
 			</footer>
 
 		<!-- Scripts -->
-			<script src="cover styling/assets/js/jquery.min.js"></script>
-			<script src="cover styling/assets/js/jquery.scrolly.min.js"></script>
-			<script src="cover styling/assets/js/skel.min.js"></script>
-			<script src="cover styling/assets/js/util.js"></script>
-			<script src="cover styling/assets/js/main.js"></script>
+			<script src="{% static 'cover styling/assets/js/jquery.min.js'%}" ></script>
+			<script src="{% static 'cover styling/assets/js/jquery.scrolly.min.js'%}" ></script>
+			<script src="{% static 'cover styling/assets/js/skel.min.js'%}" ></script>
+			<script src="{% static 'cover styling/assets/js/util.js'%}" ></script>
+			<script src="{% static 'cover styling/assets/js/main.js'%}" ></script>
 
 	</body>
 </html>
