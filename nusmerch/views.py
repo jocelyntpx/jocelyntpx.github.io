@@ -1,12 +1,7 @@
 from django.http import HttpResponse
 from .models import userInfo
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-
-
+from django.contrib.auth import userInfo
+from django.contrib.auth.forms import UserChangeForm
 
 # Create your views here.
 def index(request):
@@ -59,3 +54,20 @@ def sign_in(request):
 
 def logged_in(request):
 	return render(request,"nusmerch/loggedin.html")
+ 
+def edit_info_url(request):
+	return render(request,"nusmerch/editinfo.html")
+
+def edit_info(request):
+	if request.method == 'POST':
+		form = UserChangeForm(REQUEST.POST,instance=request.user)
+
+		if form.is_valid():
+			form.save()
+			return redirect('/loggedin/')
+
+		else:
+			form = UserChangeForm(instance=request.user)
+			args = {'form': form}
+			return render(request, "nusmerch/editinfo.html" )
+

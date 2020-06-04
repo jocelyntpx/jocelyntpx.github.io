@@ -16,8 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from . import views
 from django.contrib import admin
-from django.contrib.auth import views as auth_views
-from django.urls import path, include
+from django.contrib.auth.views import LoginView
 
 
 
@@ -28,7 +27,7 @@ urlpatterns = [
 	url(r'^home_page/$',views.home_page,name='home_page'),
 	url(r'^about_page/$',views.about_page,name='about_page'),
 	url(r'^elements_page/$',views.elements_page,name='elements_page'),
-    url(r'^sign_in/$',auth_views.LoginView.as_view(template_name='nusmerch/login.html'),name='sign_in'),
+    url(r'^sign_in/$',views.sign_in,name='sign_in'),
     url(r'^logged_in/$',views.logged_in,name='logged_in'),
-
+    url(r'^/logged_in/edit_info/$',views.edit_info_url,name='edit_info'),
 ]
