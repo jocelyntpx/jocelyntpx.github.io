@@ -25,7 +25,7 @@
               <div id="navbar" class="navbar-collapse collapse">
                 {% if user.is_authenticated %}
                 <ul class="nav navbar-nav">
-                    <li><a href="{% url 'nusmerch:index' %}">Home</a></li>
+                    <li><a href="{% url 'nusmerch:merch' %}">Home</a></li>
                     <li><a href="{% url 'nusmerch:view_profile' %}">Profile</a></li>
                     <li><a href="{% url 'nusmerch:edit_profile' %}">Edit Profile</a></li>
                     <li><a href="{% url 'nusmerch:change_password' %}">Change Password</a></li>

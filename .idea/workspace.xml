@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/loggedin.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/loggedin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -100,7 +102,9 @@
       <workItem from="1591015406710" duration="1483000" />
       <workItem from="1591117725416" duration="2797000" />
       <workItem from="1591123536613" duration="466000" />
-      <workItem from="1591257707373" duration="7946000" />
+      <workItem from="1591257707373" duration="8032000" />
+      <workItem from="1591266259332" duration="663000" />
+      <workItem from="1591460955240" duration="3726000" />
     </task>
     <servers />
   </component>

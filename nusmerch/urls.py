@@ -45,6 +45,7 @@ urlpatterns = [
 
     url(r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(template_name='nusmerch/reset_password_confirm.html'), name='password_reset_confirm'),
 
-    url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_done')
+    url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_done'),
 
+    url(r'^merch/$',views.merge,name='merge'),
 ]
