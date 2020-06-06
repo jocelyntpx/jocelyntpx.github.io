@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'nusmerchd.urls'
@@ -122,4 +123,22 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-LOGIN_REDIRECT_URL = '/index/'
+LOGIN_REDIRECT_URL = '/nusmerch/index/'
+
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'tutorial/media')
+
+LOGIN_URL = '/nusmerch/login/'
+
+LOGIN_EXEMPT_URLS = (
+    r'^nusmerch/logout/$',
+    r'^nusmerch/signup/$',
+    r'^nusmerch/reset-password/$',
+    r'^nusmerch/reset-password/done/$',
+    r'^nusmerch/reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
+    r'^nusmerch/reset-password/complete/$',
+)
+
+

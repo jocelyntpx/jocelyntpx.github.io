@@ -1,7 +1,18 @@
 from django.http import HttpResponse
 from .models import userInfo
-from django.contrib.auth import userInfo
-from django.contrib.auth.forms import UserChangeForm
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from django.contrib import messages
+
+
+from nusmerch.forms import (
+    EditProfileForm
+)
+
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
@@ -18,11 +29,15 @@ def add_user_form_submission(request):
 	faculty = request.POST.get("faculty",False)
 	user_password = request.POST["user_password"]
 	user_repeatpass = request.POST["user_repeatpass"]
+	image = request.POST["user_repeatpass"]
 
-	user_info = userInfo(user_name=user_name,user_number=user_number,user_email=user_email,faculty=faculty,user_password=user_password,user_repeatpass=user_repeatpass)
+	user_info = userInfo(user_name=user_name,user_number=user_number,user_email=user_email,faculty=faculty,user_password=user_password,user_repeatpass=user_repeatpass,image=image)
 	user_info.save()
 	messages.success(request,'Account created successfully') 
 	return render(request,"nusmerch/signupsuccessful.html")
+
+def login_form_submission(request):
+    return render(request,"nusmerch/loggedin.html")
 
 def home_page(request):
 	return render(request, "nusmerch/index.html")
@@ -36,38 +51,42 @@ def elements_page(request):
 def sign_in(request):
 	return render(request,"nusmerch/login.html")
 
-
-""" def sign_in_form(request):
-	if request.method == 'POST':
-		form = UserCreationForm(request.POST)
-		if form.is_valid():
-			# log in user
-			form.save()
-			user = form.cleaned_data.get('email')
-			messages.success(request,'Account created successfully for {user_name}:')
-			return redirect('nusmerch/loggedin.html')
-	else:
-		form = UserCreationForm()
-	return render(request,'nusmerch/login.html',{'form':form}) 
-"""
-
-
 def logged_in(request):
 	return render(request,"nusmerch/loggedin.html")
+
+def edit_profile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('nusmerch:view_profile'))
+    else:
+        form = EditProfileForm(instance=request.user)
+        args = {'form': form}
+        return render(request, 'nusmerch/edit_profile.html', args)
+
+def view_profile(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+    else:
+        user = request.user
+    args = {'user': user}
+    return render(request, 'nusmerch/profile.html', args)
  
-def edit_info_url(request):
-	return render(request,"nusmerch/editinfo.html")
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(data=request.POST, user=request.user)
 
-def edit_info(request):
-	if request.method == 'POST':
-		form = UserChangeForm(REQUEST.POST,instance=request.user)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            return redirect(reverse('nusmerch:view_profile'))
+        else:
+            return redirect(reverse('nusmerch:change_password'))
+    else:
+        form = PasswordChangeForm(user=request.user)
 
-		if form.is_valid():
-			form.save()
-			return redirect('/loggedin/')
-
-		else:
-			form = UserChangeForm(instance=request.user)
-			args = {'form': form}
-			return render(request, "nusmerch/editinfo.html" )
+        args = {'form': form}
+        return render(request, 'nusmerch/change_password.html', args)
 

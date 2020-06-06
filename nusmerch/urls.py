@@ -16,7 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from . import views
 from django.contrib import admin
-from django.contrib.auth.views import LoginView
+from django.contrib.auth import (
+    login, logout
+)
+from django.contrib.auth.views import (
+    PasswordResetView,  PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView 
+)
 
 
 
@@ -29,5 +34,17 @@ urlpatterns = [
 	url(r'^elements_page/$',views.elements_page,name='elements_page'),
     url(r'^sign_in/$',views.sign_in,name='sign_in'),
     url(r'^logged_in/$',views.logged_in,name='logged_in'),
-    url(r'^/logged_in/edit_info/$',views.edit_info_url,name='edit_info'),
+    url(r'^logout/$', logout, {'template_name': 'nusmerch/logout.html'}, name='logout'),
+    url(r'^profile/(?P<pk>\d+)/$', views.view_profile, name='view_profile_with_pk'),
+    url(r'^logged_in/profile/edit/$',views.edit_profile,name='edit_profile'),
+    url(r'^logged_in/profile/view/$',views.view_profile,name='view_profile'),
+    url(r'^change-password/$', views.change_password, name='change_password'),
+    
+    url(r'^password/reset/$', PasswordResetView.as_view(template_name='nusmerch/reset_password.html'), name='reset_password'),
+    url(r'^reset-password/done/$', PasswordResetDoneView.as_view(template_name='nusmerch/reset_password_done.html'), name='password_reset_done'),
+
+    url(r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(template_name='nusmerch/reset_password_confirm.html'), name='password_reset_confirm'),
+
+    url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_done')
+
 ]

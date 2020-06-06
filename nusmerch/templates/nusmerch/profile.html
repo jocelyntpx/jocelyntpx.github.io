@@ -1,0 +1,21 @@
+{% load static %}
+
+
+{% block head %}
+<title>Profile</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Profile</h1>
+    <p>Username: {{ user }}</p>
+    <p>Name: {{ user.user_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Phone number: {{ user.number }}</p>
+    <p>Faculty: {{ user.faculty }}</p>
+    {% if user.userprofile.image %}
+    <img src="{{ user.userprofile.image.url }}" width="240">
+    {% endif %}
+</div>
+
+{% endblock %}
