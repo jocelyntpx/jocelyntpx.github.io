@@ -48,7 +48,7 @@ def about_page(request):
 def elements_page(request):
 	return render(request, "nusmerch/elements.html")
 
-def sign_in(request):
+def login(request):
 	return render(request,"nusmerch/login.html")
 
 def logged_in(request):
@@ -90,5 +90,5 @@ def change_password(request):
         args = {'form': form}
         return render(request, 'nusmerch/change_password.html', args)
 
-def merge(request):
+def merch(request):
     return render(request, "nusmerch/merch.html")
