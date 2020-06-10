@@ -8,7 +8,7 @@ from django.contrib import messages
 from nusmerch.forms import (
     EditProfileForm, UserForm, UserProfileForm
 )
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import authenticate, logout, login as login_check
 from django.contrib.auth.views import (
     PasswordResetView,  PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView 
 )
@@ -16,6 +16,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm
 
 
 # Create your views here.
@@ -31,7 +32,7 @@ def add_user_form_submission(request):
         user_form = UserForm(data=request.POST)
         profile_form = UserProfileForm(data=request.POST)
         if user_form.is_valid() and profile_form.is_valid():
-            user = user_form.save()
+            user = user_form.save(commit=False)
             user.set_password(user.password)
             user.save()
             profile = profile_form.save(commit=False)
@@ -70,21 +71,23 @@ def login(request):
 
 def logged_in(request):	
     if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        user = authenticate(email=email, password=password)
-        if user:
-            if user.is_active:
-                login(request,user)
-                return render(request,"nusmerch/loggedin.html")
-            else:
-                return HttpResponse("Your account was inactive.")
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            #username = form.cleaned_data.get('username')
+            #password = form.cleaned_data.get('password')
+            #user = authenticate(username=username, password=password)
+            user = form.get_user()
+            login_check(request,user)
+            return render(request,"nusmerch/loggedin.html")
+      #  else:
+            #messages.error(request, "Invalid username or password.")
         else:
-            print("Someone tried to login and failed.")
-            print("They used username: {} and password: {}".format(email,password))
-            return HttpResponse("Invalid login details given")
-    else:
-        return render(request, 'nusmerch/login.html', {})
+            messages.error(request, "Invalid username or password.")
+            return render(request, 'nusmerch/login.html', {})
+    form = AuthenticationForm()
+    return render(request = request,
+                    template_name = "nusmerch/login.html",
+                    context={"form":form})
 
 def edit_profile(request):
     if request.method == 'POST':

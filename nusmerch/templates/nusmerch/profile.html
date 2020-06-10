@@ -9,10 +9,12 @@
 <div class="container">
     <h1>Profile</h1>
     <p>Username: {{ user }}</p>
-    <p>Name: {{ user.user_name }}</p>
-    <p>Email: {{ user.email }}</p>
-    <p>Phone number: {{ user.number }}</p>
-    <p>Faculty: {{ user.faculty }}</p>
+    <p>Name: {{ user.userinfo.name }}</p>
+    <p>Email: {{ user.userinfo.email }}</p>
+    <p>Phone number: {{ user.userinfo.number }}</p>
+    <p>Faculty: {{ user.userinfo.faculty }}</p>
+    <p>Matric: {{user.userinfo.matric}}</p>
+    <p>Campus Residential Type: {{user.userinfo.campus_residential_type}}</p>
     {% if user.userprofile.image %}
     <img src="{{ user.userprofile.image.url }}" width="240">
     {% endif %}

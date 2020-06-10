@@ -34,80 +34,13 @@
 			<div class="wrap-login100">
 				<form class="contact-form" method="POST" action="/add_user_form_submission/">
 					{% csrf_token %}
+	
 
 					<span class="login100-form-title p-b-34 p-t-27">
 						NUSMERCH Sign Up
 					</span>
-
-					<div class="wrap-input100 validate-input" data-validate = "Enter name">
-						<input class="input100" type="name" name="name" placeholder="Full Name" required>
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Enter phone number">
-						<input class="input100" type="number" name="number" placeholder="Phone Number" required>
-						<span class="focus-input100" data-placeholder="&#xf095;"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Enter name">
-						<input class="input100" type="matric" name="matric" placeholder="Matric Number" required>
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Enter email">
-						<input class="input100" type="email" name="email" placeholder="NUS Email" required>
-						<span class="focus-input100" data-placeholder="&#xf003;"></span>
-					</div>
-
-					<form method="GET" >
-					<div class="12u$">
-                        <div class="select-wrapper">
-						<label for="faculty">Faculty:</label>
-						<select id="faculty" required>
-							<option value="">Select</option>
-							<option value="1">Arts and Social Sciences</option>
-							<option value="2">Business</option>
-							<option value="3">Computing</option>
-							<option value="4">Dentistry</option>
-							<option value="5">Design and Environment</option>
-							<option value="6">Engineering</option>
-							<option value="7">Law</option>
-							<option value="8">Medicine</option>
-							<option value="9">Science</option>
-						  </select>
-						</div>
-					</div>
-
-					<form method="GET" >
-					<div class="12u$">
-                        <div class="select-wrapper">
-						<label for="Rcampus_residential_type">Residences:</label>
-						<select id="campus_residential_type" required>
-							<option value="">Select</option>
-							<option value="1">Temasek Hall/option>
-							<option value="2">Eusoff Hall</option>
-							<option value="3">Sheares Hall</option>
-							<option value="4">Raffles Hall</option>
-							<option value="5">Kent Ridge Hall</option>
-							<option value="6">Tembusu</option>
-							<option value="7">Ridge View Residences</option>
-							<option value="8">College of Alice and Peter Tan</option>
-							<option value="9">University Scholars Programme</option>
-							<option value="10">Residential College 4</option>
-							<option value="11">Do Not Stay On Campus</option>
-						  </select>
-						</div>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="password" placeholder="Password" required>
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Re-enter password">
-						<input class="input100" type="password" name="repeatpass" placeholder="Re-enter Password" required>
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
-					</div>
+					{{ user_form.as_p }}
+					{{ profile_form.as_p }}
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">

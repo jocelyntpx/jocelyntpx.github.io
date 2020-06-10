@@ -36,20 +36,13 @@
 				<form class="login100-form validate-form" method="post" action="/logged_in/">
 
 					{% csrf_token %}
+					
 
 					<span class="login100-form-title p-b-34 p-t-27">
 						NUSMERCH Login
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Enter email">
-						<input class="input100" type="text" name="email" placeholder="NUS Email" required>
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password" required>
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
-					</div>
+					{{ form.as_p }}
 
 					<div class="contact100-form-checkbox">
 						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">

@@ -20,7 +20,7 @@ from django.contrib.auth import (
     login, logout
 )
 from django.contrib.auth.views import (
-    PasswordResetView,  PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView 
+    LoginView, PasswordResetView,  PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView 
 )
 
 
@@ -32,7 +32,7 @@ urlpatterns = [
 	url(r'^home_page/$',views.home_page,name='home_page'),
 	url(r'^about_page/$',views.about_page,name='about_page'),
 	url(r'^elements_page/$',views.elements_page,name='elements_page'),
-    url(r'^login/$',views.login,name='login'),
+    url(r'^login/$', LoginView.as_view(template_name='nusmerch/login.html'), name="login"),
     url(r'^logged_in/$',views.logged_in,name='logged_in'),
     url(r'^logout/$', logout, {'template_name': 'nusmerch/logout.html'}, name='logout'),
     url(r'^profile/(?P<pk>\d+)/$', views.view_profile, name='view_profile_with_pk'),

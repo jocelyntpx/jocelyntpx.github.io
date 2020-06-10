@@ -32,7 +32,7 @@ class CustomUserAdmin(UserAdmin):
 
 
 admin.site.unregister(User)
-admin.site.register(User, CustomUserAdmin)"""
+admin.site.register(User, CustomUserAdmin)
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = ['name', 'number', 'email', 'faculty','image',
         'matric','campus_residential_type',]
@@ -47,4 +47,6 @@ class UserProfileAdmin(admin.ModelAdmin):
 
     user_info.short_description = 'Info'
 
-admin.site.register(userInfo,UserProfileAdmin)
+admin.site.register(userInfo,UserProfileAdmin)"""
+
+admin.site.register(userInfo)

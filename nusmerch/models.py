@@ -50,9 +50,8 @@ class userInfo(models.Model):
 	campus_residential_type = models.CharField('Campus Residential Type',
     max_length=100, choices=Campus_Residential,
     default='NIL')
-	password1 = models.CharField(max_length=50)
-	password2 = models.CharField(max_length=50)
+	password = models.CharField(max_length=50)
 	image = models.ImageField(upload_to='profile_image', blank=True)
 
-	def str(self):
-		return f'{self.user.username} Profile'
+	def __str__(self):
+		return self.email
