@@ -35,7 +35,7 @@ admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)"""
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = ['name', 'number', 'email', 'faculty','image',
-        'matric','major','campus_residential_type',]
+        'matric','campus_residential_type',]
 
     def user_info(self, obj):
         return obj.description

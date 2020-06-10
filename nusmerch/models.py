@@ -43,7 +43,6 @@ class userInfo(models.Model):
 	number = models.IntegerField()
 	matric = models.CharField('Matric Number',max_length=10,help_text='AXXXXXXXB') 
 	email = models.EmailField(max_length=200, blank=False)
-	major = models.CharField(max_length=50)
 	faculty = models.CharField(
     	max_length=50,
     	choices=faculty_types,

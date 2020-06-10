@@ -21,7 +21,6 @@ class EditProfileForm(UserChangeForm):
             'number',
             'password',
             'faculty',
-            'major',
             'campus_residential_type',
             'image',
 
@@ -30,7 +29,7 @@ class EditProfileForm(UserChangeForm):
 class UserProfileForm(forms.ModelForm):
     class Meta():
         model = userInfo
-        fields = ('name','number','matric','email','major','faculty','campus_residential_type','image')
+        fields = ('name','number','matric','email','faculty','campus_residential_type','image')
 
         widgets={
             'faculty':forms.Select(attrs={'style':'width:220px'}),
