@@ -34,7 +34,7 @@ urlpatterns = [
 	url(r'^elements_page/$',views.elements_page,name='elements_page'),
     url(r'^login/$', LoginView.as_view(template_name='nusmerch/login.html'), name="login"),
     url(r'^logged_in/$',views.logged_in,name='logged_in'),
-    url(r'^logout/$', logout, {'template_name': 'nusmerch/logout.html'}, name='logout'),
+    url(r'^logout/$', views.logout, name='logout'),
     url(r'^profile/(?P<pk>\d+)/$', views.view_profile, name='view_profile_with_pk'),
     url(r'^logged_in/profile/edit/$',views.edit_profile,name='edit_profile'),
     url(r'^logged_in/profile/view/$',views.view_profile,name='view_profile'),
@@ -48,4 +48,5 @@ urlpatterns = [
     url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_done'),
 
     url(r'^merch/$',views.merch,name='merch'),
+    url(r'^upload/$', views.upload, name='upload'),
 ]

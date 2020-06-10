@@ -127,3 +127,6 @@ def change_password(request):
 
 def merch(request):
     return render(request, "nusmerch/merch.html")
+
+def logout(request):
+	return render(request,"nusmerch/logout.html")
