@@ -50,4 +50,3 @@ class UserProfileAdmin(admin.ModelAdmin):
 admin.site.register(userInfo,UserProfileAdmin)"""
 
 admin.site.register(userInfo)
-admin.site.register(Post)
