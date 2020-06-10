@@ -1,18 +1,22 @@
-from django.http import HttpResponse
-from .models import userInfo
+from django.http import HttpResponse, HttpResponseRedirect
+from nusmerch.models import userInfo
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib import messages
 
 
 from nusmerch.forms import (
-    EditProfileForm
+    EditProfileForm, UserForm, UserProfileForm
 )
-
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.views import (
+    PasswordResetView,  PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView 
+)
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def index(request):
@@ -22,19 +26,32 @@ def addUser(request):
 	return render(request,"nusmerch/signup.html")
 
 def add_user_form_submission(request):
-	print("User Registered Successfully")
-	user_name = request.POST["user_name"]
-	user_number = request.POST["user_number"]
-	user_email = request.POST["user_email"]
-	faculty = request.POST.get("faculty",False)
-	user_password = request.POST["user_password"]
-	user_repeatpass = request.POST["user_repeatpass"]
-	image = request.POST["user_repeatpass"]
+    registered = False
+    if request.method =='POST':
+        user_form = UserForm(data=request.POST)
+        profile_form = UserProfileForm(data=request.POST)
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save()
+            user.set_password(user.password)
+            user.save()
+            profile = profile_form.save(commit=False)
+            profile.user = user
+            if 'profile_pic' in request.FILES:
+                print('found it')
+                profile.profile_pic = request.FILES['profile_pic']
+            profile.save()
+            registered = True
+            return render(request,'nusmerch/signupsuccessful.html')
+        else:
+            print(user_form.errors,profile_form.errors)
+    else:
+        user_form = UserForm()
+        profile_form = UserProfileForm()
+    return render(request,'nusmerch/signup.html',
+                          {'user_form':user_form,
+                           'profile_form':profile_form,
+                           'registered':registered})
 
-	user_info = userInfo(user_name=user_name,user_number=user_number,user_email=user_email,faculty=faculty,user_password=user_password,user_repeatpass=user_repeatpass,image=image)
-	user_info.save()
-	messages.success(request,'Account created successfully') 
-	return render(request,"nusmerch/signupsuccessful.html")
 
 def login_form_submission(request):
     return render(request,"nusmerch/loggedin.html")
@@ -51,8 +68,23 @@ def elements_page(request):
 def login(request):
 	return render(request,"nusmerch/login.html")
 
-def logged_in(request):
-	return render(request,"nusmerch/loggedin.html")
+def logged_in(request):	
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user = authenticate(email=email, password=password)
+        if user:
+            if user.is_active:
+                login(request,user)
+                return render(request,"nusmerch/loggedin.html")
+            else:
+                return HttpResponse("Your account was inactive.")
+        else:
+            print("Someone tried to login and failed.")
+            print("They used username: {} and password: {}".format(email,password))
+            return HttpResponse("Invalid login details given")
+    else:
+        return render(request, 'nusmerch/login.html', {})
 
 def edit_profile(request):
     if request.method == 'POST':
