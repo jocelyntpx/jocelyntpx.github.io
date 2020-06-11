@@ -79,9 +79,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="row">
     {% for product in products %}
     <div class="col-lg-4">
-      <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+      <img class="thumbnail" src="product.image">
       <div class="box-element product">
-        <h6><strong>{{product.name}}}</strong></h6>
+        <h6><strong>{{product.name}}</strong></h6>
         <hr>
 
         <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>

@@ -78,7 +78,9 @@ def logged_in(request):
             #user = authenticate(username=username, password=password)
             user = form.get_user()
             login_check(request,user)
-            return render(request,"nusmerch/merch.html")
+            products = Product.objects.all()
+            context = {'products':products}
+            return render(request, "nusmerch/merch.html", context)
       #  else:
             #messages.error(request, "Invalid username or password.")
         else:
@@ -132,7 +134,7 @@ def change_password(request):
 def merch(request):
     products = Product.objects.all()
     context = {'products':products}
-    return render(request, "nusmerch/merch.html")
+    return render(request, "nusmerch/merch.html", context)
 
 def logout(request):
     if request.method == "POST":
