@@ -131,7 +131,7 @@ LOGIN_REDIRECT_URL = '/nusmerch/index/'
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'tutorial/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'nusmerchd/media')
 
 LOGIN_URL = '/nusmerch/login/'
 

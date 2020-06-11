@@ -17,8 +17,8 @@
     <p>Faculty: {{ user.userinfo.faculty }}</p>
     <p>Matric: {{user.userinfo.matric}}</p>
     <p>Campus Residential Type: {{user.userinfo.campus_residential_type}}</p>
-    {% if user.userprofile.image %}
-    <img src="{{ user.userprofile.image.url }}" width="240">
+    {% if user.userinfo.image %}
+    <img src="{{ user.userinfo.image.url }}" width="240">
     {% endif %}
 </div>
 

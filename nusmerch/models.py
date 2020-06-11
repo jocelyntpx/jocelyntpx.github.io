@@ -44,7 +44,7 @@ class userInfo(models.Model):
     max_length=100, choices=Campus_Residential,
     default='NIL')
 	password = models.CharField(max_length=50)
-	image = models.ImageField(upload_to='profile_image', blank=True)
+	image = models.ImageField(upload_to='media', blank=True)
 
 	def __str__(self):
 		return self.email
@@ -69,7 +69,7 @@ class Product(models.Model):
 	price = models.FloatField()
 	organisation = models.CharField(max_length=200,null=True)
 	form = models.URLField(max_length=200)
-	image = models.ImageField(upload_to='image', blank=True)
+	image = models.ImageField(null=True, blank=True)
 
 	def __str__(self):
 		return self.name
