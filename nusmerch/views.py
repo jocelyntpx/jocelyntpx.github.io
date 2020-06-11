@@ -78,7 +78,7 @@ def logged_in(request):
             #user = authenticate(username=username, password=password)
             user = form.get_user()
             login_check(request,user)
-            return render(request,"nusmerch/loggedin.html")
+            return render(request,"nusmerch/merch.html")
       #  else:
             #messages.error(request, "Invalid username or password.")
         else:
@@ -136,3 +136,6 @@ def logout(request):
     if request.method == "POST":
         logout(request)
         return render(request, "nusmerch/index.html")
+
+def user_account(request):
+    return render(request, "nusmerch/profile.html")
