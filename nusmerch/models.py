@@ -35,7 +35,7 @@ class userInfo(models.Model):
    	('RVRC', 'Ridge View Residences'),
 	('CAPT', 'College of Alice and Peter Tan'),
     ('USP', 'University Scholars Programme'),
-    ('RC4', 'Residential COllege 4'),
+    ('RC4', 'Residential College 4'),
     ('NIL', 'Do Not Stay On Campus'),
     ]
 	user = models.OneToOneField(User, on_delete=models.CASCADE)

@@ -89,15 +89,19 @@ def logged_in(request):
                     template_name = "nusmerch/login.html",
                     context={"form":form})
 
+@login_required
 def edit_profile(request):
     if request.method == 'POST':
-        form = EditProfileForm(request.POST, instance=request.user)
-
+        user = request.user
+        form = EditProfileForm(request.POST, instance=userInfo)
+        form.user = user
         if form.is_valid():
             form.save()
-            return redirect(reverse('nusmerch:view_profile'))
+            return render(request, 'nusmerch/profile.html')
+        else:
+            print(form.errors)
     else:
-        form = EditProfileForm(instance=request.user)
+        form = EditProfileForm()
         args = {'form': form}
         return render(request, 'nusmerch/edit_profile.html', args)
 

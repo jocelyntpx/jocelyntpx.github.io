@@ -8,7 +8,7 @@
 <body style="background-color:ghostwhite;">
 {% block body %}
 <div class="container">
-    <form method="post">
+	<form class="contact-form" method="POST" action="/edit_profile/">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
