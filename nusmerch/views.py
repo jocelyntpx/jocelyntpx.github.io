@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from nusmerch.models import userInfo
+from nusmerch.models import userInfo, Product
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib import messages
@@ -130,6 +130,8 @@ def change_password(request):
         return render(request, 'nusmerch/change_password.html', args)
 
 def merch(request):
+    products = Product.objects.all()
+    context = {'products':products}
     return render(request, "nusmerch/merch.html")
 
 def logout(request):

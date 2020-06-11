@@ -7,10 +7,6 @@ from django.utils.translation import gettext_lazy as _
 from datetime import date
 from django.dispatch import receiver
 
-class UserProfileManager(models.Manager):
-    def get_queryset(self):
-        return super(UserProfileManager, self).get_queryset().filter(faculty='fass')
-
 # Create your models here.
 class userInfo(models.Model):
 	faculty_types = [
@@ -66,3 +62,14 @@ class Post(models.Model):
 
 	def __str__(selfself):
 		return self.title
+
+
+class Product(models.Model):
+	name = models.CharField(max_length=200,null=True)
+	price = models.FloatField()
+	organisation = models.CharField(max_length=200,null=True)
+	form = models.URLField(max_length=200)
+	image = models.ImageField(upload_to='image', blank=True)
+
+	def __str__(self):
+		return self.name
