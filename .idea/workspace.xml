@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/merch.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/font-awesome.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/loggedin.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/loggedin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +42,8 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -64,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css" />
       <recent name="$PROJECT_DIR$/nusmerch/static" />
     </key>
   </component>
@@ -110,7 +119,8 @@
       <workItem from="1591257707373" duration="8032000" />
       <workItem from="1591266259332" duration="663000" />
       <workItem from="1591460955240" duration="3726000" />
-      <workItem from="1591862278456" duration="735000" />
+      <workItem from="1591862278456" duration="4203000" />
+      <workItem from="1591866787713" duration="5575000" />
     </task>
     <servers />
   </component>
@@ -130,10 +140,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591811165784">
-      <screen x="0" y="23" width="1440" height="809" />
+    <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591864638008">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.809@0.23.1440.809" timestamp="1591811165784" />
+    <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.811@0.23.1440.811" timestamp="1591864638008" />
     <state x="704" y="33" key="#nusmerchd" timestamp="1591263407953">
       <screen x="0" y="23" width="1440" height="809" />
     </state>

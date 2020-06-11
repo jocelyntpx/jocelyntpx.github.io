@@ -5,9 +5,10 @@
 <title>Profile</title>
 {% endblock %}
 
+<body style="background-color:ghostwhite;">
 {% block body %}
 <div class="container">
-    <h1>Profile</h1>
+    <h1 style="font-family: Montserrat-Regualr, sans-serif">Profile</h1>
     <p>Username: {{ user }}</p>
     <p>Name: {{ user.userinfo.name }}</p>
     <p>Email: {{ user.userinfo.email }}</p>
@@ -21,3 +22,5 @@
 </div>
 
 {% endblock %}
+
+</body>

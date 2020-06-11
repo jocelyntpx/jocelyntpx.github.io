@@ -40,13 +40,10 @@ class userInfo(models.Model):
     ]
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	name = models.CharField('Full Name',max_length=200)
-	number = models.IntegerField()
-	matric = models.CharField('Matric Number',max_length=10,help_text='AXXXXXXXB') 
-	email = models.EmailField(max_length=200, blank=False)
-	faculty = models.CharField(
-    	max_length=50,
-    	choices=faculty_types,
-    	default='FASS')
+	number = models.IntegerField('Phone Number', unique=True)
+	matric = models.CharField('Matric Number',max_length=10,help_text='AXXXXXXXB', unique=True)
+	email = models.EmailField('NUS Email', max_length=200, blank=False, unique=True)
+	faculty = models.CharField(max_length=50,choices=faculty_types,default='FASS')
 	campus_residential_type = models.CharField('Campus Residential Type',
     max_length=100, choices=Campus_Residential,
     default='NIL')

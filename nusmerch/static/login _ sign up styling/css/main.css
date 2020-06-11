@@ -35,12 +35,12 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+	font-family: Roboto, sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+	font-family: Roboto;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -222,7 +222,7 @@ iframe {
 }
 
 .login100-form-title {
-  font-family: Poppins-Medium;
+  font-family: Roboto;
   font-size: 30px;
   color: #fff;
   line-height: 1.2;

@@ -1662,7 +1662,7 @@
 		}
 
 	a {
-		color: #25a2c3;
+		color: #232b2b;
 		text-decoration: underline;
 	}
 
@@ -1885,8 +1885,8 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #25a2c3;
-			box-shadow: 0 0 0 1px #25a2c3;
+			border-color: #232b2b;
+			box-shadow: 0 0 0 1px #232b2b;
 		}
 
 	.select-wrapper {
@@ -1989,16 +1989,16 @@
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #232b2b;
-			border-color: #232b2b;
+			background: #f6755e;
+			border-color: #f6755e;
 			color: #ffffff;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #25a2c3;
-			box-shadow: 0 0 0 1px #25a2c3;
+			border-color: #232b2b;
+			box-shadow: 0 0 0 1px #232b2b;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2417,7 +2417,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #f78a76;
+			background-color: #A9A9A9;
 		}
 
 		input[type="submit"]:active,
@@ -2509,7 +2509,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #25a2c3;
+			background-color: #232b2b;
 			color: #ffffff !important;
 		}
 
@@ -2518,7 +2518,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #2bb3d7;
+				background-color: #232b2b;
 			}
 
 			input[type="submit"].special:active,
@@ -2526,7 +2526,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #2190ae;
+				background-color: #232b2b;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2626,11 +2626,11 @@
 	}
 
 		.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5 {
-			color: #25a2c3;
+			color: #232b2b;
 		}
 
 		.wrapper.style1 {
-			background: #f6755e;
+			background: #232b2b;
 			color: #fcdcd6;
 		}
 
@@ -2683,10 +2683,10 @@
 	}
 
 		#header .logo {
-			color: #f6755e;
-			font-family: "Pacifico", cursive;
+			color: #232b2b;
+			font-family: "Montserrat-Regualr", sans-serif;
 			font-size: 2.5em;
-			letter-spacing: 2px;
+			letter-spacing: 4px;
 			margin-top: -5px;
 			text-decoration: none;
 			display: inline-block;
@@ -2794,7 +2794,7 @@
 		-ms-transition: -ms-transform 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: #25a2c3;
+		background: #232b2b;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -2851,7 +2851,7 @@
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #a7d9e7;
+			color: #232b2b;
 			cursor: pointer;
 			display: block;
 			height: 3.25em;
@@ -2937,7 +2937,7 @@
 
 		#banner h1 {
 			font-size: 3em;
-			color: #25a2c3;
+			color: #232b2b;
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
@@ -3136,7 +3136,7 @@
 
 	#footer {
 		padding: 6em 0 4em 0;
-		background: #25a2c3;
+		background: #232b2b;
 		text-align: center;
 		color: #c8e7f0;
 	}
