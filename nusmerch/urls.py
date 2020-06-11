@@ -49,6 +49,7 @@ urlpatterns = [
 
     url(r'^merch/$',views.merch,name='merch'),
     url(r'^user_account/$',views.user_account,name='user_account'),
-
+    url(r'^cart/$', views.cart, name="cart"),
+    url(r'^checkout/$', views.checkout, name="checkout"),
 
 ]

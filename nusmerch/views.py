@@ -139,3 +139,11 @@ def logout(request):
 
 def user_account(request):
     return render(request, "nusmerch/profile.html")
+
+def cart(request):
+    context = {}
+    return render(request, 'nusmerch/cart.html', context)
+
+def checkout(request):
+    context = {}
+    return render(request, 'nusmerch/checkout.html', context)

@@ -21,4 +21,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/',admin.site.urls),
     url(r'^',include(('nusmerch.urls','nusmerch'),namespace='nusmerch'))
+   # url(r'^', include('store.urls')),
 ]
