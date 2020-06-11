@@ -11,18 +11,19 @@ class UserForm(forms.ModelForm):
         fields = ('username','password')
 
 
-class EditProfileForm(UserChangeForm):
-
+class EditProfileForm(forms.ModelForm):
     class Meta():
         model = userInfo
         fields = (
             'number',
-            'password',
             'faculty',
             'campus_residential_type',
             'image',
-
         )
+        widgets={
+            'faculty':forms.Select(attrs={'style':'width:220px'}),
+            'campus_residential_type':forms.Select(attrs={'style':'width:130px'})
+        }
 
 class UserProfileForm(forms.ModelForm):
     class Meta():
