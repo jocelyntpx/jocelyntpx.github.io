@@ -135,7 +135,7 @@ def merch(request):
 def logout(request):
     if request.method == "POST":
         logout(request)
-        return render(request, "nusmerch/index.html")
+        return render(request, "nusmerch/logout.html")
 
 def user_account(request):
     return render(request, "nusmerch/profile.html")
