@@ -51,5 +51,6 @@ urlpatterns = [
     url(r'^user_account/$',views.user_account,name='user_account'),
     url(r'^cart/$', views.cart, name="cart"),
     url(r'^checkout/$', views.checkout, name="checkout"),
+    url(r'^activate/<uidb64>/<token>/$', views.activate, name='activate'),
 
 ]
