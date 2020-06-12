@@ -8,7 +8,7 @@ class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput(attrs={'type':"password"}))
     class Meta():
         model = User
-        fields = ('username','password')
+        fields = ('username','email','password')
 
 
 class EditProfileForm(forms.ModelForm):
@@ -28,7 +28,7 @@ class EditProfileForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
     class Meta():
         model = userInfo
-        fields = ('email','name','number','matric','faculty','campus_residential_type','image')
+        fields = ('name','number','matric','faculty','campus_residential_type','image')
 
         widgets={
             'faculty':forms.Select(attrs={'style':'width:220px'}),

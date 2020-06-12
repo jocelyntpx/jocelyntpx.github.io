@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from nusmerch.models import userInfo, Product
+from nusmerch.models import userInfo, Product, Order, OrderItem
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib import messages
@@ -33,10 +33,11 @@ def add_user_form_submission(request):
         profile_form = UserProfileForm(data=request.POST)
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save(commit=False)
+            profile = profile_form.save(commit=False)
             user.set_password(user.password)
             user.save()
-            profile = profile_form.save(commit=False)
             profile.user = user
+            profile.email = user.email
             if 'profile_pic' in request.FILES:
                 print('found it')
                 profile.profile_pic = request.FILES['profile_pic']
@@ -145,7 +146,16 @@ def user_account(request):
     return render(request, "nusmerch/profile.html")
 
 def cart(request):
-    context = {}
+    if request.user.is_authenticated:
+        customer_email = request.user.email
+        customer = userInfo.objects.get(email=customer_email)
+        order, created = Order.objects.get_or_create(customer=customer,complete=False)
+        items = order.orderitem_set.all()
+    else:
+        items = []
+        order = {'get_cart_total':0,'get_cart_items':0}
+
+    context = {'items':items,'order':order}
     return render(request, 'nusmerch/cart.html', context)
 
 def checkout(request):
