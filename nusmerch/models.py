@@ -49,20 +49,6 @@ class userInfo(models.Model):
 	def __str__(self):
 		return self.email
 
-class Image(models.Model):
-    name= models.CharField(max_length=500)
-    imagefile= models.FileField(upload_to='images/', null=True, verbose_name="")
-
-    def __str__(self):
-        return self.name + ": " + str(self.imagefile)
-
-class Post(models.Model):
-	title = models.CharField(max_length = 50)
-	price = models.CharField(max_length = 10)
-
-	def __str__(selfself):
-		return self.title
-
 
 class Product(models.Model):
 	name = models.CharField(max_length=200,null=True)
