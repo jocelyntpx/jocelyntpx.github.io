@@ -65,14 +65,28 @@ class Post(models.Model):
 
 
 class Product(models.Model):
+	cat = [
+    ('Shirt', 'Shirt'),
+    ('Outerwear', 'Outerwear'),
+   	('Bottom', 'Bottom'),
+   	('Laptop Accessories', 'Laptop Accessories'),
+   	('Others', 'Others'),
+   	]
 	name = models.CharField(max_length=200,null=True)
 	price = models.DecimalField(decimal_places=2,max_digits=5)
 	organisation = models.CharField(max_length=200,null=True)
+	category = models.CharField(max_length=200,null=True,choices=cat)
 	form = models.URLField(max_length=200)
 	image = models.ImageField(null=True, blank=True)
+	slug = models.SlugField()
 
 	def __str__(self):
 		return self.name
+
+	def get_absolute_url(self):
+		return reverse("core:product",kwargs={
+			'slug':self.slug
+			})
 
 class Order(models.Model):
 	customer = models.ForeignKey(userInfo,on_delete=models.SET_NULL,blank=True,null=True)
