@@ -1,0 +1,70 @@
+{% extends "nusmerch/merch.html" %}
+{% load static %}
+
+
+{% block head %}
+    <p class="w3-left">Shirts</p>
+{% endblock %}
+
+
+{% block menu %}
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>NUSMERCH</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Apparel  <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="/shirt/" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Shirts</a>
+      <a href="/buttom/" class="w3-bar-item w3-button">Bottom</a>
+      <a href="#" class="w3-bar-item w3-button">Outerwear</a>
+    </div>
+
+
+    <a href="#" class="w3-bar-item w3-button">Lifestyle</a>
+    <a href="#" class="w3-bar-item w3-button">Laptop Accessories</a>
+    <a href="#" class="w3-bar-item w3-button">Others</a>
+  </div>
+
+
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      User Account  <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="{% url 'nusmerch:view_profile' %}" class="w3-bar-item w3-button">Profile Details</a>
+      <a href="{% url 'nusmerch:edit_profile' %}" class="w3-bar-item w3-button">Edit Profile</a>
+      <a href="{% url 'nusmerch:change_password' %}" class="w3-bar-item w3-button">Change Password</a>
+    </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+</nav>
+
+
+{% endblock %}
+
+
+{% block product %}
+
+  <div class="w3-row">
+    {% for product in products %}
+    <div class="w3-col l4 s4">
+      <img class="item center thumbnail" src="{{ product.image.url }}">
+      <div class="w3-container">
+        <h6><strong>{{product.name}}</strong></h6>
+        <hr>
+        <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+        <a class="btn btn-outline-success" href="#">View</a>
+        <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
+        <hr>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

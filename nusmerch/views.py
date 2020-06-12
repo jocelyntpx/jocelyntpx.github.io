@@ -125,7 +125,7 @@ def logged_in(request):
             login_check(request,user)
             products = Product.objects.all()
             context = {'products':products}
-            return render(request, "nusmerch/merch.html", context)
+            return render(request, "nusmerch/shirt.html", context)
       #  else:
             #messages.error(request, "Invalid username or password.")
         else:
@@ -181,10 +181,20 @@ def merch(request):
     context = {'products':products}
     return render(request, "nusmerch/merch.html", context)
 
+def shirt(request):
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request, "nusmerch/shirt.html", context)
+
+def buttom(request):
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request, "nusmerch/buttom.html", context)
+
 def logout(request):
     if request.method == "POST":
         logout(request)
-        return render(request, "nusmerch/logout.html")
+        return render(request, "nusmerch/index.html")
 
 def user_account(request):
     return render(request, "nusmerch/profile.html")
