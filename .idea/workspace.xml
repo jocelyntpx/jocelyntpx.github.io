@@ -20,10 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/merch(cdn).js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/merch(jquery).js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/merch(stackpath).js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/merch.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/merch.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/loggedin.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/loggedin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" afterDir="false" />
@@ -38,10 +45,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -70,7 +77,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css" />
+      <recent name="$PROJECT_DIR$/nusmerch/templates/nusmerch" />
+      <recent name="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch pages" />
+      <recent name="$PROJECT_DIR$/nusmerch" />
+      <recent name="$PROJECT_DIR$/nusmerch/templates" />
       <recent name="$PROJECT_DIR$/nusmerch/static" />
     </key>
   </component>
@@ -119,6 +129,8 @@
       <workItem from="1591460955240" duration="3726000" />
       <workItem from="1591862278456" duration="4203000" />
       <workItem from="1591866787713" duration="8995000" />
+      <workItem from="1591947214547" duration="142000" />
+      <workItem from="1591947397024" duration="22288000" />
     </task>
     <servers />
   </component>

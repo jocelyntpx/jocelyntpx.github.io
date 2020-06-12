@@ -48,10 +48,13 @@ urlpatterns = [
     url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_done'),
 
     url(r'^merch/$',views.merch,name='merch'),
+    url(r'^shirt/$',views.shirt,name='shirt'),
+    url(r'^buttom/$',views.buttom,name='buttom'),
     url(r'^user_account/$',views.user_account,name='user_account'),
     url(r'^cart/$', views.cart, name="cart"),
     url(r'^checkout/$', views.checkout, name="checkout"),
     url(r'^product/$', views.product, name="product"),
 
+    url(r'^activate/<uidb64>/<token>/$', views.activate, name='activate'),
 
 ]

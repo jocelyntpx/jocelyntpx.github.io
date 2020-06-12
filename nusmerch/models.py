@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
-
-
 from django.utils.translation import gettext_lazy as _
 from datetime import date
 from django.dispatch import receiver
@@ -48,20 +46,6 @@ class userInfo(models.Model):
 
 	def __str__(self):
 		return self.email
-
-class Image(models.Model):
-    name= models.CharField(max_length=500)
-    imagefile= models.FileField(upload_to='images/', null=True, verbose_name="")
-
-    def __str__(self):
-        return self.name + ": " + str(self.imagefile)
-
-class Post(models.Model):
-	title = models.CharField(max_length = 50)
-	price = models.CharField(max_length = 10)
-
-	def __str__(selfself):
-		return self.title
 
 
 class Product(models.Model):

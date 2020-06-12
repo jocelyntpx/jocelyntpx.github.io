@@ -1,3 +1,4 @@
+{% extends "nusmerch/user_acct_base.html" %}
 {% load static %}
 {% csrf_token %}
 <html>
@@ -6,7 +7,6 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% block head %}
-        <title>User Account</title>
         {% endblock %}
 
     </head>
@@ -19,7 +19,7 @@
               <div id="navbar" class="navbar-collapse collapse">
                 {% if user.is_authenticated %}
                 <ul class="nav navbar-nav">
-                    <li><a href="{% url 'nusmerch:merch' %}">Home</a></li>
+                    <li><a href="{% url 'nusmerch:shirt' %}">Home</a></li>
                     <li><a href="{% url 'nusmerch:view_profile' %}">Profile</a></li>
                     <li><a href="{% url 'nusmerch:edit_profile' %}">Edit Profile</a></li>
                     <li><a href="{% url 'nusmerch:change_password' %}">Change Password</a></li>
