@@ -3,7 +3,7 @@
 
 
 {% block head %}
-  <p class="w3-left">Buttom</p>
+  <p class="w3-left">Bottom</p>
 {% endblock %}
 
 
@@ -14,20 +14,22 @@
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide"><b>NUSMERCH</b></h3>
   </div>
+
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+
       <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
       Apparel  <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
       <a href="/shirt/" class="w3-bar-item w3-button ">Shirts</a>
-      <a href="/buttom/" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Bottom</a>
-      <a href="#" class="w3-bar-item w3-button">Outerwear</a>
+      <a href="/bottom/" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Bottom</a>
+      <a href="/outerwear/" class="w3-bar-item w3-button">Outerwear</a>
     </div>
 
 
-    <a href="#" class="w3-bar-item w3-button">Lifestyle</a>
-    <a href="#" class="w3-bar-item w3-button">Laptop Accessories</a>
-    <a href="#" class="w3-bar-item w3-button">Others</a>
+    <a href="/lifestyle/" class="w3-bar-item w3-button">Lifestyle</a>
+    <a href="/laptop/" class="w3-bar-item w3-button">Laptop Accessories</a>
+    <a href="/others/" class="w3-bar-item w3-button">Others</a>
   </div>
 
 
@@ -39,7 +41,8 @@
       <a href="{% url 'nusmerch:edit_profile' %}" class="w3-bar-item w3-button">Edit Profile</a>
       <a href="{% url 'nusmerch:change_password' %}" class="w3-bar-item w3-button">Change Password</a>
     </div>
-  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+    <a href="#footer" class="w3-bar-item w3-button w3-padding">Sell Merch</a>
+    <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
   <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>

@@ -126,7 +126,7 @@ def logged_in(request):
             #user = authenticate(username=username, password=password)
             user = form.get_user()
             login_check(request,user)
-            products = Product.objects.all()
+            products = Product.objects.filter(category = "Shirt")
             context = {'products':products}
             return render(request, "nusmerch/shirt.html", context)
       #  else:
@@ -194,15 +194,36 @@ def merch(request):
     context = {'products':products}
     return render(request, "nusmerch/merch.html", context)
 
+
 def shirt(request):
-    products = Product.objects.all()
+    products = Product.objects.filter(category = "Shirt")
     context = {'products':products}
     return render(request, "nusmerch/shirt.html", context)
 
-def buttom(request):
-    products = Product.objects.all()
+def bottom(request):
+    products = Product.objects.filter(category = "Bottom")
     context = {'products':products}
     return render(request, "nusmerch/buttom.html", context)
+
+def outerwear(request):
+    products = Product.objects.filter(category = "Outerwear")
+    context = {'products':products}
+    return render(request, "nusmerch/outerwear.html", context)
+
+def lifestyle(request):
+    products = Product.objects.filter(category = "Lifestyle")
+    context = {'products':products}
+    return render(request, "nusmerch/lifestyle.html", context)
+
+def laptop(request):
+    products = Product.objects.filter(category = "Laptop Accessories")
+    context = {'products':products}
+    return render(request, "nusmerch/laptop.html", context)
+
+def others(request):
+    products = Product.objects.filter(category = "Others")
+    context = {'products':products}
+    return render(request, "nusmerch/others.html", context)
 
 def logout(request):
     if request.method == "POST":

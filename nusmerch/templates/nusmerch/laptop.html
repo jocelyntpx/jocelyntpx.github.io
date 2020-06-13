@@ -3,7 +3,7 @@
 
 
 {% block head %}
-    <p class="w3-left">Shirts</p>
+    <p class="w3-left">Laptop Accessories</p>
 {% endblock %}
 
 
@@ -21,14 +21,14 @@
       Apparel  <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="/shirt/" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Shirts</a>
+      <a href="/shirt/" class="w3-bar-item w3-button">Shirts</a>
       <a href="/bottom/" class="w3-bar-item w3-button">Bottom</a>
       <a href="/outerwear/" class="w3-bar-item w3-button">Outerwear</a>
     </div>
 
 
     <a href="/lifestyle/" class="w3-bar-item w3-button">Lifestyle</a>
-    <a href="/laptop/" class="w3-bar-item w3-button">Laptop Accessories</a>
+    <a href="/laptop/" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Laptop Accessories</a>
     <a href="/others/" class="w3-bar-item w3-button">Others</a>
   </div>
 
@@ -48,7 +48,6 @@
 </nav>
 
 
-
 {% endblock %}
 
 
@@ -61,7 +60,7 @@
       <div class="w3-container">
         <h6><strong>{{product.name}}</strong></h6>
         <hr>
-        <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+        <button data-products={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn ypdate-cart">Add to Cart</button>
         <a class="btn btn-outline-success" href="#">View</a>
         <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
         <hr>
