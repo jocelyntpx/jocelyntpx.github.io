@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.utils.translation import gettext_lazy as _
 from datetime import date
+from django.shortcuts import reverse
 from django.dispatch import receiver
+from django.conf import settings
 
 # Create your models here.
 class userInfo(models.Model):
@@ -62,15 +64,10 @@ class Product(models.Model):
 	category = models.CharField(max_length=200,null=True,choices=cat)
 	form = models.URLField(max_length=200)
 	image = models.ImageField(null=True, blank=True)
-	slug = models.SlugField()
 
 	def __str__(self):
 		return self.name
 
-	def get_absolute_url(self):
-		return reverse("core:product",kwargs={
-			'slug':self.slug
-			})
 
 class Order(models.Model):
 	customer = models.ForeignKey(userInfo,on_delete=models.SET_NULL,blank=True,null=True)

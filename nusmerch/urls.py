@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from . import views
+from django.shortcuts import reverse
 from django.contrib import admin
 from django.contrib.auth import (
     login, logout
@@ -53,8 +54,6 @@ urlpatterns = [
     url(r'^user_account/$',views.user_account,name='user_account'),
     url(r'^cart/$', views.cart, name="cart"),
     url(r'^checkout/$', views.checkout, name="checkout"),
-    url(r'^product/$', views.product, name="product"),
-
     url(r'^activate/<uidb64>/<token>/$', views.activate, name='activate'),
 
 ]
