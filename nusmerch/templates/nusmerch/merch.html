@@ -10,7 +10,26 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script type="text/javascript">
+  var user = '{{request.user}}'
 
+  function getToken(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getToken('csrftoken');
+</script>
 
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
@@ -48,11 +67,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <p class="w3-right">
         <a href="javascript:void(0)" class="fa fa-search w3-margin-right" onclick="document.getElementById('search').style.display='block'"></a>
 
-      <a href="/cart/" class="fa fa-shopping-cart "></a>
-
+      <a href="/cart/" class="fa fa-shopping-cart ">
+      </a>
+      <h id="cart-total">{{cartItems}}</h>
 
         <a href="{% url 'nusmerch:logout' %}" class="fa fa-sign-out w3-margin-left"></a>
     </p>
+    
+    
   </header>
 
   <!-- Image header -->
@@ -192,6 +214,6 @@ function w3_close() {
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'js/cart.js' %}">
+<script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
 </body>
 </html>
