@@ -10,7 +10,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'cover styling/assets/css/main.css' %}">
-
+<script type="text/javascript">
+	var user = '{{request.user}}'
+  
+	function getToken(name) {
+	  var cookieValue = null;
+	  if (document.cookie && document.cookie !== '') {
+		  var cookies = document.cookie.split(';');
+		  for (var i = 0; i < cookies.length; i++) {
+			  var cookie = cookies[i].trim();
+			  // Does this cookie string begin with the name we want?
+			  if (cookie.substring(0, name.length + 1) === (name + '=')) {
+				  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+				  break;
+			  }
+		  }
+	  }
+	  return cookieValue;
+  }
+  var csrftoken = getToken('csrftoken');
+</script>
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
@@ -40,7 +59,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 						<th><h5>Items: <strong>{{order.get_cart_items}}</strong></h5></th>
 						<th><h5>Total:<strong> {{order.get_cart_total}}</strong></h5></th>
 						<th>
-							<a  style="float:right; margin:5px;" class="btn btn-success" href="/checkout/">Checkout</a>
+							
 						</th>
 					</tr>
 				</table>
@@ -54,7 +73,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 					<div style="flex:2"><strong>Item</strong></div>
 					<div style="flex:1"><strong>Price</strong></div>
 					<div style="flex:1"><strong>Quantity</strong></div>
-					<div style="flex:1"><strong>Total</strong></div>
                     <div style="flex:1"><strong></strong></div>
 				</div>
 				{% for item in items %}
@@ -65,12 +83,13 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 					<div style="flex:1">
 						<p class="quantity">{{item.quantity}}</p>
 						<div class="quantity">
-							<img data-product="{{item.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}"width="20">
+							<img data-product="{{item.product.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}"width="20">
 					
-							<img data-product="{{item.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}"width="20">
+							<img data-product="{{item.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}"width="20">
 						</div>
 					</div>
-					<div style="flex:1"><p>$32</p></div>
+				<div style="flex:1" data-product="{{item.product.id}}" data-action="removeAll" class="btn btn-outline-success add-btn update-cart" href="javascript:void(0)"><p>Remove Item</p></div>
+			
                 <div style="flex:1" class="btn btn-outline-success" href="/checkout/"><p>Checkout</p></div>
 
 				</div>
