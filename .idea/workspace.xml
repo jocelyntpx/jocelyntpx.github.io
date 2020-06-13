@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/laptop.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/laptop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/lifestyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/lifestyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/others.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/others.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/outerwear.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/outerwear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,7 @@
       <workItem from="1591947214547" duration="142000" />
       <workItem from="1591947397024" duration="22288000" />
       <workItem from="1592035882199" duration="344000" />
-      <workItem from="1592043269826" duration="940000" />
+      <workItem from="1592043269826" duration="1532000" />
     </task>
     <servers />
   </component>
