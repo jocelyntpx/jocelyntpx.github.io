@@ -74,6 +74,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 					<div style="flex:1"><strong>Price</strong></div>
 					<div style="flex:1"><strong>Quantity</strong></div>
                     <div style="flex:1"><strong></strong></div>
+                    <div style="flex:1"><strong></strong></div>
 				</div>
 				{% for item in items %}
 				<div class="cart-row">
@@ -88,9 +89,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 							<img data-product="{{item.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}"width="20">
 						</div>
 					</div>
-				<div style="flex:1" data-product="{{item.product.id}}" data-action="removeAll" class="btn btn-outline-success add-btn update-cart" href="javascript:void(0)"><p>Remove Item</p></div>
+				<div style="flex:1" data-product="{{item.product.id}}" data-action="removeAll" class="btn btn-outline-success add-btn update-cart" ><p>Remove Item</p></div>
 			
-                <div style="flex:1" class="btn btn-outline-success" href="/checkout/"><p>Checkout</p></div>
+                <div style="flex:1" class="btn btn-outline-success" href="/checkout/"><p>Buy Now</p></div>
 
 				</div>
 				{% endfor %}

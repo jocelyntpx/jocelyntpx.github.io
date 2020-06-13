@@ -3,6 +3,8 @@ from nusmerch.models import userInfo, Product, Order, OrderItem
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
+from django.views.generic import DetailView
+
 from django.conf import settings
 from django.core.mail import send_mail
 
@@ -277,3 +279,9 @@ def updateItem(request):
         orderItem.delete()
     
     return JsonResponse('Item was added', safe=False)
+
+def product(request):
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request, "nusmerch/product.html", context)
+

@@ -65,9 +65,16 @@ class Product(models.Model):
 	category = models.CharField(max_length=200,null=True,choices=cat)
 	form = models.URLField(max_length=200)
 	image = models.ImageField(null=True, blank=True)
+	#slug = models.SlugField()
 
 	def __str__(self):
 		return self.name
+
+	#def get_absolute_url(self):
+		#return reverse("core: product", kwargs={
+		#	'slug': self.slug
+	#	})
+
 
 
 class Order(models.Model):
