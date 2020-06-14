@@ -28,6 +28,7 @@ from django.template.loader import render_to_string
 from .tokens import account_activation_token
 from django.core.mail import EmailMessage
 import json
+from django.db.models import Q
 
 
 # Create your views here.
@@ -230,9 +231,9 @@ def others(request):
     return render(request, "nusmerch/others.html", context)
 
 
-
 def search_results(request):
-    products = Product.objects.all()
+    query = request.GET.get('search')
+    products = Product.objects.filter(Q(name_of_MERCH__icontains=query))
     context = {'products':products}
     return render(request, "nusmerch/search_results.html", context)
 
