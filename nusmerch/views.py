@@ -44,7 +44,7 @@ def add_user_form_submission(request):
         profile_form = UserProfileForm(request.POST,request.FILES)
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save(commit=False)
-            user.is_active = False
+            #user.is_active = False
             profile = profile_form.save(commit=False)
             user.set_password(user.password)
             user.save()
@@ -74,6 +74,7 @@ def add_user_form_submission(request):
           #      profile.image = request.FILES['profile_pic']
             profile.save()
             registered = True
+
             #return HttpResponse('Please confirm your email address to complete the registration')
             return render(request,'nusmerch/signupsuccessful.html')
         else:
