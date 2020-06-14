@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/wrong_email.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +122,8 @@
       <workItem from="1591947397024" duration="22288000" />
       <workItem from="1592035882199" duration="344000" />
       <workItem from="1592043269826" duration="11382000" />
-      <workItem from="1592119417979" duration="7717000" />
+      <workItem from="1592119417979" duration="8148000" />
+      <workItem from="1592148619289" duration="2256000" />
     </task>
     <servers />
   </component>

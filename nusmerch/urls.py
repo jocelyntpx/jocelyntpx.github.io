@@ -64,5 +64,6 @@ urlpatterns = [
     url(r'^search_results/$', views.search_results, name="search_results"),
 
     url(r'^activate/<uidb64>/<token>/$', views.activate, name='activate'),
+    url(r'^wrong_email/$', views.wrong_email, name="wrong_email"),
 
 ]

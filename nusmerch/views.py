@@ -3,7 +3,6 @@ from nusmerch.models import userInfo, Product, Order, OrderItem
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
-from django.views.generic import ListView
 
 from django.conf import settings
 from django.core.mail import send_mail
@@ -67,13 +66,16 @@ def add_user_form_submission(request):
 
             profile.user = user
             profile.email = user.email
+            if not user.email.split('@')[1] == "u.nus.edu":
+                user.delete()
+                return render(request, "nusmerch/wrong_email.html")
           #  if 'profile_pic' in request.FILES:
             #    print('found it')
           #      profile.image = request.FILES['profile_pic']
             profile.save()
             registered = True
-            return HttpResponse('Please confirm your email address to complete the registration')
-            #return render(request,'nusmerch/signupsuccessful.html')
+            #return HttpResponse('Please confirm your email address to complete the registration')
+            return render(request,'nusmerch/signupsuccessful.html')
         else:
             print(user_form.errors,profile_form.errors)
     else:
@@ -175,12 +177,11 @@ def change_password(request):
         if form.is_valid():
             form.save()
             update_session_auth_hash(request, form.user)
-            return redirect(reverse('nusmerch:view_profile'))
+            return render(request, 'nusmerch/profile.html')
         else:
-            return redirect(reverse('nusmerch:change_password'))
+            return print(form.errors)
     else:
         form = PasswordChangeForm(user=request.user)
-
         args = {'form': form}
         return render(request, 'nusmerch/change_password.html', args)
 
@@ -311,3 +312,6 @@ def sell_merch(request):
         form = UploadProductForm()
     args = {'form': form}
     return render(request, 'nusmerch/sell_merch.html', args)
+
+def wrong_email(request):
+    return render(request, "nusmerch/wrong_email.html")
