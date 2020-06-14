@@ -146,8 +146,8 @@ def logged_in(request):
 def edit_profile(request):
     if request.method == 'POST':
         user = request.user
-        form = EditProfileForm(request.POST, instance=userInfo)
-        form.user = user
+        profile =userInfo.objects.get(user=user)
+        form = EditProfileForm(request.POST,request.FILES,instance=profile)
         if form.is_valid():
             form.save()
             return render(request, 'nusmerch/profile.html')

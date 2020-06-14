@@ -37,7 +37,7 @@ urlpatterns = [
     url(r'^logged_in/$',views.logged_in,name='logged_in'),
     url(r'^logout/$', LogoutView.as_view(template_name='nusmerch/index.html'), name="logout"),
     url(r'^profile/(?P<pk>\d+)/$', views.view_profile, name='view_profile_with_pk'),
-    url(r'^logged_in/profile/edit/$',views.edit_profile,name='edit_profile'),
+    url(r'^edit_profile/$',views.edit_profile,name='edit_profile'),
     url(r'^logged_in/profile/view/$',views.view_profile,name='view_profile'),
     url(r'^change-password/$', views.change_password, name='change_password'),
     
