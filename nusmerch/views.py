@@ -178,13 +178,17 @@ def change_password(request):
         if form.is_valid():
             form.save()
             update_session_auth_hash(request, form.user)
-            return render(request, 'nusmerch/profile.html')
+            return render(request, 'nusmerch/profile.html', args)
+
         else:
-            return print(form.errors)
+            return render(request, 'nusmerch/shirt.html')
+
     else:
         form = PasswordChangeForm(user=request.user)
         args = {'form': form}
         return render(request, 'nusmerch/change_password.html', args)
+
+
 
 def merch(request):
     if request.user.is_authenticated:

@@ -39,7 +39,7 @@ urlpatterns = [
     url(r'^profile/(?P<pk>\d+)/$', views.view_profile, name='view_profile_with_pk'),
     url(r'^edit_profile/$',views.edit_profile,name='edit_profile'),
     url(r'^logged_in/profile/view/$',views.view_profile,name='view_profile'),
-    url(r'^change-password/$', views.change_password, name='change_password'),
+    url(r'^change_password/$', views.change_password, name='change_password'),
     
     url(r'^password/reset/$', PasswordResetView.as_view(template_name='nusmerch/reset_password.html'), name='reset_password'),
     url(r'^reset-password/done/$', PasswordResetDoneView.as_view(template_name='nusmerch/reset_password_done.html'), name='password_reset_done'),
