@@ -3,7 +3,7 @@
 
 
 {% block head %}
-  <p class="w3-left">Bottom</p>
+    <p class="w3-left">Search Results</p>
 {% endblock %}
 
 
@@ -21,8 +21,8 @@
       Apparel  <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="/shirt/" class="w3-bar-item w3-button ">Shirts</a>
-      <a href="/bottom/" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Bottom</a>
+      <a href="/shirt/" class="w3-bar-item w3-button">Shirts</a>
+      <a href="/bottom/" class="w3-bar-item w3-button">Bottom</a>
       <a href="/outerwear/" class="w3-bar-item w3-button">Outerwear</a>
     </div>
 
@@ -41,11 +41,12 @@
       <a href="{% url 'nusmerch:edit_profile' %}" class="w3-bar-item w3-button">Edit Profile</a>
       <a href="{% url 'nusmerch:change_password' %}" class="w3-bar-item w3-button">Change Password</a>
     </div>
-    <a href="/sell_merch/" class="w3-bar-item w3-button w3-padding">Sell Merch</a>
+  <a href="/sell_merch/" class="w3-bar-item w3-button w3-padding">Sell Merch</a>
     <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
   <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>
+
 
 
 {% endblock %}
@@ -69,5 +70,6 @@
     {% endfor %}
 
   </div>
+
 
 {% endblock %}

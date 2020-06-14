@@ -3,7 +3,7 @@ from nusmerch.models import userInfo, Product, Order, OrderItem
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
-from django.views.generic import DetailView
+from django.views.generic import ListView
 
 from django.conf import settings
 from django.core.mail import send_mail
@@ -165,7 +165,8 @@ def view_profile(request, pk=None):
         user = request.user
     args = {'user': user}
     return render(request, 'nusmerch/profile.html', args)
- 
+
+@login_required
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(data=request.POST, user=request.user)
@@ -228,6 +229,13 @@ def others(request):
     context = {'products':products}
     return render(request, "nusmerch/others.html", context)
 
+
+
+def search_results(request):
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request, "nusmerch/search_results.html", context)
+
 def logout(request):
     if request.method == "POST":
         logout(request)
@@ -286,13 +294,16 @@ def product(request):
     context = {'products':products}
     return render(request, "nusmerch/product.html", context)
 
+@login_required
 def sell_merch(request):
     if request.method == 'POST':
         form = UploadProductForm(request.POST,request.FILES)
         if form.is_valid():
             product = form.save(commit=False)
             product.save()
-            return render(request, 'nusmerch/shirt.html')
+            products = Product.objects.filter(category="Shirt")
+            context = {'products': products}
+            return render(request, 'nusmerch/shirt.html', context)
         else:
             print(form.errors)
     else:

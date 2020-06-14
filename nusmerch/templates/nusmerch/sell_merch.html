@@ -3,7 +3,7 @@
 
 
 {% block head %}
-<title>Upload Merchandise</title>
+<title>Upload MERCH</title>
 {% endblock %}
 
 {% block menu2 %}
@@ -15,11 +15,13 @@
       <a href="{% url 'nusmerch:edit_profile' %}" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Edit Profile</a>
       <a href="{% url 'nusmerch:change_password' %}" class="w3-bar-item w3-button">Change Password</a>
     </div>
+
+    <a href="/sell_merch/" class="w3-bar-item w3-button w3-padding w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sell Merch</a>
 {% endblock %}
 
 {% block body %}
 <div class="container">
-<h1 style="font-family: Montserrat-Regualr, sans-serif">Sell Merchandise</h1>
+<h1 style="font-family: Montserrat-Regualr, sans-serif">Sell MERCH</h1>
 	<form class="contact-form" method="POST" action="/sell_merch/" enctype='multipart/form-data'>
         {% csrf_token %}
         {{ form.as_p }}
@@ -27,6 +29,14 @@
             Post
         </button>
     </form>
+    <br>
+</div>
+
+<hr>
+
+<div class="container">
+<h2 style="font-family: Montserrat-Regualr, sans-serif">MERCH Listed</h2>
+
     <br>
 </div>
 

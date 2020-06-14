@@ -59,16 +59,19 @@ class Product(models.Model):
 	('Lifestyle', 'Lifestyle'),
    	('Others', 'Others'),
    	]
-	name = models.CharField(max_length=200,null=True)
+	name_of_MERCH = models.CharField(max_length=200,null=True)
 	price = models.DecimalField(decimal_places=2,max_digits=5)
 	organisation = models.CharField(max_length=200,null=True)
 	category = models.CharField(max_length=200,null=True,choices=cat)
 	form = models.URLField(max_length=200)
 	image = models.ImageField(upload_to='media',null=True, blank=True)
+	#user = models.ForeignKey(userInfo, on_delete=models.SET_NULL,blank=True,null=True)
 	#slug = models.SlugField()
 
 	def __str__(self):
-		return self.name
+		return self.name_of_MERCH
+
+
 
 	#def get_absolute_url(self):
 		#return reverse("core: product", kwargs={
@@ -112,4 +115,5 @@ class OrderItem(models.Model):
 	def get_total(self):
 		total = self.product.price * self.quantity
 		return total
-	
+
+

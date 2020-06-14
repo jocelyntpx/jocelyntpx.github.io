@@ -20,9 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/search_results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/laptop.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/laptop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/lifestyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/lifestyle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/others.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/others.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/outerwear.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/outerwear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/sell_merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/sell_merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +53,8 @@
       <list>
         <option value="CSS File" />
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -120,6 +139,7 @@
       <workItem from="1591947397024" duration="22288000" />
       <workItem from="1592035882199" duration="344000" />
       <workItem from="1592043269826" duration="11382000" />
+      <workItem from="1592119417979" duration="6688000" />
     </task>
     <servers />
   </component>
