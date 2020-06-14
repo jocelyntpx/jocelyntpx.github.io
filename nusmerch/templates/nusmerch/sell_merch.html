@@ -3,7 +3,7 @@
 
 
 {% block head %}
-<title>Edit Profile</title>
+<title>Upload Merchandise</title>
 {% endblock %}
 
 {% block menu2 %}
@@ -19,19 +19,14 @@
 
 {% block body %}
 <div class="container">
-<h1 style="font-family: Montserrat-Regualr, sans-serif">Upload Merchandise</h1>
-  <form class="contact-form" method="POST" action="/edit_profile/">
-    {% csrf_token %}
-
-    {{ form.as_p }}
-
-    <div class="container-login100-form-btn">
-      <button class="login100-form-btn">
-        Upload
-      </button>
-    </div>
-
-  </form>
+<h1 style="font-family: Montserrat-Regualr, sans-serif">Sell Merchandise</h1>
+	<form class="contact-form" method="POST" action="/sell_merch/" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="login100-form-btn">
+            Post
+        </button>
+    </form>
     <br>
 </div>
 

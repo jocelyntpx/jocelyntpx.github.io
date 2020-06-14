@@ -91,7 +91,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 					</div>
 				<div style="flex:1" data-product="{{item.product.id}}" data-action="removeAll" class="btn btn-outline-success add-btn update-cart" ><p>Remove Item</p></div>
 			
-                <button style="flex:1" class="btn btn-outline-success"> <a target=_blank title="Buy Now" {{item.product.form|urlize}}  ></a><p>Buy Now</p></button>
+                <button style="flex:1;overflow:hidden;" class="btn btn-outline-success" > <a target=_blank title="Buy Now" {{item.product.form|urlize}}  ></a><p>Buy Now</p></button>
 
 				</div>
 				{% endfor %}

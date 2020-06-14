@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
-from .models import userInfo
+from .models import userInfo, Product
 from django import forms
 
 class UserForm(forms.ModelForm):
@@ -35,4 +35,12 @@ class UserProfileForm(forms.ModelForm):
             'campus_residential_type':forms.Select(attrs={'style':'width:130px'})
         }
 
-
+class UploadProductForm(forms.ModelForm):
+    class Meta():
+        model = Product
+        fields = (
+            'name','price','organisation','category','form','image'
+        )
+        widgets={
+            'faculty':forms.Select(attrs={'style':'width:220px'})
+        }

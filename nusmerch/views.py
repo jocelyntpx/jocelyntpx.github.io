@@ -9,7 +9,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 
 from nusmerch.forms import (
-    EditProfileForm, UserForm, UserProfileForm
+    EditProfileForm, UserForm, UserProfileForm, UploadProductForm
 )
 from django.contrib.auth import authenticate, logout, login as login_check
 from django.contrib.auth.views import (
@@ -41,7 +41,7 @@ def add_user_form_submission(request):
     registered = False
     if request.method =='POST':
         user_form = UserForm(data=request.POST)
-        profile_form = UserProfileForm(data=request.POST)
+        profile_form = UserProfileForm(request.POST,request.FILES)
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save(commit=False)
             user.is_active = False
@@ -49,25 +49,26 @@ def add_user_form_submission(request):
             user.set_password(user.password)
             user.save()
 
-            current_site = get_current_site(request)
-            mail_subject = 'Activate your NUSMERCH account.'
-            message = render_to_string('nusmerch/acc_active_email.html', {
-                'user': user,
-                'domain': current_site.domain,
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                'token': account_activation_token.make_token(user),
-            })
-            to_email = form.cleaned_data.get('email')
-            email = EmailMessage(
-                mail_subject, message, to=[to_email]
-            )
-            email.send()
+     #       current_site = get_current_site(request)
+     #       mail_subject = 'Activate your NUSMERCH account.'
+      #      message = render_to_string('nusmerch/acc_active_email.html', {
+       #         'user': user,
+        #        'domain': current_site.domain,21
+         #       'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+          #      'token': account_activation_token.make_token(user),
+         #   })
+          #  to_email = form.cleaned_data.get('email')
+           # email = EmailMessage(
+            #    mail_subject, message, to=[to_email]
+           # )
+          #  email.send()
+
 
             profile.user = user
             profile.email = user.email
-            if 'profile_pic' in request.FILES:
-                print('found it')
-                profile.profile_pic = request.FILES['profile_pic']
+          #  if 'profile_pic' in request.FILES:
+            #    print('found it')
+          #      profile.image = request.FILES['profile_pic']
             profile.save()
             registered = True
             return HttpResponse('Please confirm your email address to complete the registration')
@@ -285,3 +286,16 @@ def product(request):
     context = {'products':products}
     return render(request, "nusmerch/product.html", context)
 
+def sell_merch(request):
+    if request.method == 'POST':
+        form = UploadProductForm(request.POST,request.FILES)
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.save()
+            return render(request, 'nusmerch/shirt.html')
+        else:
+            print(form.errors)
+    else:
+        form = UploadProductForm()
+    args = {'form': form}
+    return render(request, 'nusmerch/sell_merch.html', args)

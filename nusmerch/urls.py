@@ -60,6 +60,7 @@ urlpatterns = [
     url(r'^update_item/$',views.updateItem,name="checkout"),
     url(r'^checkout/$', views.checkout, name="checkout"),
     url(r'^product/$', views.product, name="product"),
+    url(r'^sell_merch/$', views.sell_merch, name="sell_merch"),
     url(r'^activate/<uidb64>/<token>/$', views.activate, name='activate'),
 
 ]
