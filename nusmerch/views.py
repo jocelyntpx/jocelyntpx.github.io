@@ -134,6 +134,15 @@ def logged_in(request):
             user = form.get_user()
             login_check(request,user)
             products = Product.objects.filter(category = "Shirt")
+            profile = userInfo.objects.get(user=user)
+
+            pdt_nil = products.filter(filter="NIL")
+            pdt_faculty = products.filter(filter_faculty=profile.faculty)
+            pdt_email = products.filter(filter_email__icontains=profile.email)
+            pdt_matric = products.filter(filter_matric__icontains=profile.matric)
+            pdt_campus = products.filter(filter_campus=profile.campus_residential_type)
+            products = pdt_faculty | pdt_campus | pdt_nil | pdt_matric | pdt_email
+
             context = {'products':products}
             return render(request, "nusmerch/shirt.html", context)
       #  else:
@@ -208,31 +217,109 @@ def merch(request):
 
 def shirt(request):
     products = Product.objects.filter(category = "Shirt")
+    if request.user.is_authenticated:
+        user = request.user
+        profile = userInfo.objects.get(user=user)
+        pdt_nil = products.filter(filter = "NIL")
+        pdt_faculty = products.filter(filter_faculty = profile.faculty)
+        pdt_email = products.filter(filter_email__icontains = profile.email)
+        pdt_matric = products.filter(filter_matric__icontains = profile.matric)
+        pdt_campus = products.filter(filter_campus=profile.campus_residential_type)
+        products = pdt_faculty | pdt_campus | pdt_nil | pdt_matric | pdt_email
+
+    else:
+        products = products
+
     context = {'products':products}
     return render(request, "nusmerch/shirt.html", context)
 
 def bottom(request):
     products = Product.objects.filter(category = "Bottom")
+    if request.user.is_authenticated:
+        user = request.user
+        profile = userInfo.objects.get(user=user)
+        pdt_nil = products.filter(filter = "NIL")
+        pdt_faculty = products.filter(filter_faculty = profile.faculty)
+        pdt_email = products.filter(filter_email__icontains = profile.email)
+        pdt_matric = products.filter(filter_matric__icontains = profile.matric)
+        pdt_campus = products.filter(filter_campus=profile.campus_residential_type)
+        products = pdt_faculty | pdt_campus | pdt_nil | pdt_matric | pdt_email
+
+    else:
+        products = products
+
     context = {'products':products}
     return render(request, "nusmerch/buttom.html", context)
 
 def outerwear(request):
     products = Product.objects.filter(category = "Outerwear")
+    if request.user.is_authenticated:
+        user = request.user
+        profile = userInfo.objects.get(user=user)
+        pdt_nil = products.filter(filter = "NIL")
+        pdt_faculty = products.filter(filter_faculty = profile.faculty)
+        pdt_email = products.filter(filter_email__icontains = profile.email)
+        pdt_matric = products.filter(filter_matric__icontains = profile.matric)
+        pdt_campus = products.filter(filter_campus=profile.campus_residential_type)
+        products = pdt_faculty | pdt_campus | pdt_nil | pdt_matric | pdt_email
+
+    else:
+        products = products
+
     context = {'products':products}
     return render(request, "nusmerch/outerwear.html", context)
 
 def lifestyle(request):
     products = Product.objects.filter(category = "Lifestyle")
+    if request.user.is_authenticated:
+        user = request.user
+        profile = userInfo.objects.get(user=user)
+        pdt_nil = products.filter(filter = "NIL")
+        pdt_faculty = products.filter(filter_faculty = profile.faculty)
+        pdt_email = products.filter(filter_email__icontains = profile.email)
+        pdt_matric = products.filter(filter_matric__icontains = profile.matric)
+        pdt_campus = products.filter(filter_campus=profile.campus_residential_type)
+        products = pdt_faculty | pdt_campus | pdt_nil | pdt_matric | pdt_email
+
+    else:
+        products = products
+
     context = {'products':products}
     return render(request, "nusmerch/lifestyle.html", context)
 
 def laptop(request):
     products = Product.objects.filter(category = "Laptop Accessories")
+    if request.user.is_authenticated:
+        user = request.user
+        profile = userInfo.objects.get(user=user)
+        pdt_nil = products.filter(filter = "NIL")
+        pdt_faculty = products.filter(filter_faculty = profile.faculty)
+        pdt_email = products.filter(filter_email__icontains = profile.email)
+        pdt_matric = products.filter(filter_matric__icontains = profile.matric)
+        pdt_campus = products.filter(filter_campus=profile.campus_residential_type)
+        products = pdt_faculty | pdt_campus | pdt_nil | pdt_matric | pdt_email
+
+    else:
+        products = products
+
     context = {'products':products}
     return render(request, "nusmerch/laptop.html", context)
 
 def others(request):
     products = Product.objects.filter(category = "Others")
+    if request.user.is_authenticated:
+        user = request.user
+        profile = userInfo.objects.get(user=user)
+        pdt_nil = products.filter(filter = "NIL")
+        pdt_faculty = products.filter(filter_faculty = profile.faculty)
+        pdt_email = products.filter(filter_email__icontains = profile.email)
+        pdt_matric = products.filter(filter_matric__icontains = profile.matric)
+        pdt_campus = products.filter(filter_campus=profile.campus_residential_type)
+        products = pdt_faculty | pdt_campus | pdt_nil | pdt_matric | pdt_email
+
+    else:
+        products = products
+
     context = {'products':products}
     return render(request, "nusmerch/others.html", context)
 
@@ -296,10 +383,9 @@ def updateItem(request):
     
     return JsonResponse('Item was added', safe=False)
 
-def product(request):
-    products = Product.objects.all()
-    context = {'products':products}
-    return render(request, "nusmerch/product.html", context)
+def product(request, pk_test):
+    product = Product.objects.get(id=pk_test)
+    return render(request, "nusmerch/product.html", product)
 
 @login_required
 def sell_merch(request):

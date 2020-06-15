@@ -22,7 +22,12 @@
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/sell_merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/sell_merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +127,8 @@
       <workItem from="1592043269826" duration="11382000" />
       <workItem from="1592119417979" duration="8148000" />
       <workItem from="1592148619289" duration="6339000" />
-      <workItem from="1592203140694" duration="3480000" />
+      <workItem from="1592203140694" duration="4354000" />
+      <workItem from="1592210617190" duration="11422000" />
     </task>
     <servers />
   </component>

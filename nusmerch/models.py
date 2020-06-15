@@ -59,19 +59,56 @@ class Product(models.Model):
 	('Lifestyle', 'Lifestyle'),
    	('Others', 'Others'),
    	]
+
+	filter_type = [
+		('NIL', 'NIL'),
+		('Faculty', 'Faculty'),
+		('Matric', 'Matric'),
+		('Email', 'Email'),
+		('Campus Residential', 'Campus Residential'),
+	]
+
+	faculty_types = [
+		('FASS', 'Arts and Social Sciences'),
+		('BIZ', 'Business'),
+		('COM', 'Computing'),
+		('DEN', 'Dentistry'),
+		('SDE', 'Design and Environment'),
+		('ENG', 'Engineering'),
+		('LAW', 'Law'),
+		('MED', 'Medicine'),
+		('SCI', 'Science'),
+	]
+
+	Campus_Residential = [
+		('TH', 'Temasek Hall'),
+		('EH', 'Eusoff Hall'),
+		('SH', 'Sheares Hall'),
+		('RH', 'Raffles Hall'),
+		('KR', 'Kent Ridge Hall'),
+		('TEM', 'Tembusu'),
+		('RVRC', 'Ridge View Residences'),
+		('CAPT', 'College of Alice and Peter Tan'),
+		('USP', 'University Scholars Programme'),
+		('RC4', 'Residential College 4'),
+		('NIL', 'Do Not Stay On Campus'),
+	]
 	name_of_MERCH = models.CharField(max_length=200,null=True)
 	price = models.DecimalField(decimal_places=2,max_digits=5)
 	organisation = models.CharField(max_length=200,null=True)
 	category = models.CharField(max_length=200,null=True,choices=cat)
+	filter = models.CharField('Filter Type', max_length=200,null=True,choices=filter_type, default='NIL')
+	filter_faculty = models.CharField('Filter(Faculty)', max_length=200, blank=True, choices=faculty_types)
+	filter_matric = models.CharField('Filter(Matric)',max_length=10000, blank=True)
+	filter_email = models.CharField('Filter(Email)',max_length=10000, blank=True)
+	filter_campus = models.CharField('Filter(Campus)', max_length=200, blank=True, choices=Campus_Residential)
 	form = models.URLField(max_length=200)
-	image = models.ImageField(upload_to='media',null=True, blank=True)
+	image = models.ImageField(upload_to='media',null=True)
 	#user = models.ForeignKey(userInfo, on_delete=models.SET_NULL,blank=True,null=True)
 	#slug = models.SlugField()
 
 	def __str__(self):
 		return self.name_of_MERCH
-
-
 
 	#def get_absolute_url(self):
 		#return reverse("core: product", kwargs={
