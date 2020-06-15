@@ -136,7 +136,7 @@ def logged_in(request):
             products = Product.objects.filter(category = "Shirt")
             profile = userInfo.objects.get(user=user)
 
-            pdt_nil = products.filter(filter="NIL")
+            pdt_nil = products.filter(filter="NO")
             pdt_faculty = products.filter(filter_faculty=profile.faculty)
             pdt_email = products.filter(filter_email__icontains=profile.email)
             pdt_matric = products.filter(filter_matric__icontains=profile.matric)
@@ -220,7 +220,7 @@ def shirt(request):
     if request.user.is_authenticated:
         user = request.user
         profile = userInfo.objects.get(user=user)
-        pdt_nil = products.filter(filter = "NIL")
+        pdt_nil = products.filter(filter = "NO")
         pdt_faculty = products.filter(filter_faculty = profile.faculty)
         pdt_email = products.filter(filter_email__icontains = profile.email)
         pdt_matric = products.filter(filter_matric__icontains = profile.matric)
@@ -238,7 +238,7 @@ def bottom(request):
     if request.user.is_authenticated:
         user = request.user
         profile = userInfo.objects.get(user=user)
-        pdt_nil = products.filter(filter = "NIL")
+        pdt_nil = products.filter(filter = "NO")
         pdt_faculty = products.filter(filter_faculty = profile.faculty)
         pdt_email = products.filter(filter_email__icontains = profile.email)
         pdt_matric = products.filter(filter_matric__icontains = profile.matric)
@@ -256,7 +256,7 @@ def outerwear(request):
     if request.user.is_authenticated:
         user = request.user
         profile = userInfo.objects.get(user=user)
-        pdt_nil = products.filter(filter = "NIL")
+        pdt_nil = products.filter(filter = "NO")
         pdt_faculty = products.filter(filter_faculty = profile.faculty)
         pdt_email = products.filter(filter_email__icontains = profile.email)
         pdt_matric = products.filter(filter_matric__icontains = profile.matric)
@@ -274,7 +274,7 @@ def lifestyle(request):
     if request.user.is_authenticated:
         user = request.user
         profile = userInfo.objects.get(user=user)
-        pdt_nil = products.filter(filter = "NIL")
+        pdt_nil = products.filter(filter = "NO")
         pdt_faculty = products.filter(filter_faculty = profile.faculty)
         pdt_email = products.filter(filter_email__icontains = profile.email)
         pdt_matric = products.filter(filter_matric__icontains = profile.matric)
@@ -292,7 +292,7 @@ def laptop(request):
     if request.user.is_authenticated:
         user = request.user
         profile = userInfo.objects.get(user=user)
-        pdt_nil = products.filter(filter = "NIL")
+        pdt_nil = products.filter(filter = "NO")
         pdt_faculty = products.filter(filter_faculty = profile.faculty)
         pdt_email = products.filter(filter_email__icontains = profile.email)
         pdt_matric = products.filter(filter_matric__icontains = profile.matric)
@@ -310,7 +310,7 @@ def others(request):
     if request.user.is_authenticated:
         user = request.user
         profile = userInfo.objects.get(user=user)
-        pdt_nil = products.filter(filter = "NIL")
+        pdt_nil = products.filter(filter = "NO")
         pdt_faculty = products.filter(filter_faculty = profile.faculty)
         pdt_email = products.filter(filter_email__icontains = profile.email)
         pdt_matric = products.filter(filter_matric__icontains = profile.matric)

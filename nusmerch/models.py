@@ -61,11 +61,9 @@ class Product(models.Model):
    	]
 
 	filter_type = [
-		('NIL', 'NIL'),
-		('Faculty', 'Faculty'),
-		('Matric', 'Matric'),
-		('Email', 'Email'),
-		('Campus Residential', 'Campus Residential'),
+		('NO', 'NO'),
+		('YES', 'YES'),
+
 	]
 
 	faculty_types = [
@@ -97,7 +95,7 @@ class Product(models.Model):
 	price = models.DecimalField(decimal_places=2,max_digits=5)
 	organisation = models.CharField(max_length=200,null=True)
 	category = models.CharField(max_length=200,null=True,choices=cat)
-	filter = models.CharField('Filter Type', max_length=200,null=True,choices=filter_type, default='NIL')
+	filter = models.CharField(max_length=200,null=True,choices=filter_type, default='NO')
 	filter_faculty = models.CharField('Filter(Faculty)', max_length=200, blank=True, choices=faculty_types)
 	filter_matric = models.CharField('Filter(Matric)',max_length=10000, blank=True)
 	filter_email = models.CharField('Filter(Email)',max_length=10000, blank=True)
