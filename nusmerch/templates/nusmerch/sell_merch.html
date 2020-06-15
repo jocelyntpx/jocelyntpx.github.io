@@ -51,11 +51,26 @@
         <h6><strong>{{product.name_of_MERCH}}</strong></h6>
         <hr>
         <a class="btn btn-outline-success" href="/product/">View</a>
+
+   <!--   <button href="javascript:void(0)" class="btn btn-outline-danger" onclick="document.getElementById('delete').style.display='block'">Delete Merch</button> -->
+
         <button data-product="{{product.id}}" data-action="delete"  class="btn btn-outline-danger add-btn delete-product">Delete MERCH</button>
         <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
         <hr>
       </div>
     </div>
+
+<!--
+        <div id="delete" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('delete').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide"></h2>
+        <p>Are you sure you want to delete this merch?</p>
+            <button data-product="{{product.id}}" data-action="delete"  class="btn btn-outline-danger add-btn delete-product" onclick="document.getElementById('delete').style.display='none'">Delete MERCH</button>
+    </div>
+  </div>
+</div> -->
     {% endfor %}
 
   </div>
