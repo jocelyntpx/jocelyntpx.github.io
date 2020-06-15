@@ -355,6 +355,20 @@ def checkout(request):
     context = {}
     return render(request, 'nusmerch/checkout.html', context)
 
+def delete_product(request):
+    data = json.loads(request.body)
+    productId = data['productId']
+    action = data['action']
+    print('Action:',action)
+    print('Product:',productId)   
+
+    product = Product.objects.get(id=productId)
+
+    if action == 'delete':
+        product.delete()
+
+    return JsonResponse('Product has been deleted', safe=False)
+
 def updateItem(request):
     data = json.loads(request.body)
     productId = data['productId']

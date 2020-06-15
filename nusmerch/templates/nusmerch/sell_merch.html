@@ -1,10 +1,12 @@
 {% extends "nusmerch/loggedin.html" %}
 {% load static %}
 
-
-{% block head %}
-<title>Upload MERCH</title>
-{% endblock %}
+</head>
+  {% block head %}
+  <title>Upload MERCH</title>
+  {% endblock %}
+  <script type="text/javascript" src="{% static 'js/delete_listing.js' %}">
+</head>
 
 {% block menu2 %}
     <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
@@ -37,7 +39,7 @@
 
 <hr>
 
-<div class="container">
+<body class="container">
 <h2 style="font-family: Montserrat-Regualr, sans-serif">MERCH Listed</h2>
 
   <div class="w3-row">
@@ -47,8 +49,8 @@
       <div class="w3-container">
         <h6><strong>{{product.name_of_MERCH}}</strong></h6>
         <hr>
+        <button style="flex:1" data-product="{{product.id}}" data-action="delete" class="btn btn-outline-danger add-btn delete-product" ><p>Delete Merchandise</p></button>
         <a class="btn btn-outline-success" href="/product/">View</a>
-          <a class="btn btn-outline-danger" href="#">Delete</a>
         <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
         <hr>
       </div>
@@ -56,7 +58,8 @@
     {% endfor %}
 
   </div>
-</div>
 
 {% endblock %}
 
+
+</body>

@@ -58,6 +58,7 @@ urlpatterns = [
     url(r'^user_account/$',views.user_account,name='user_account'),
     url(r'^cart/$', views.cart, name="cart"),
     url(r'^update_item/$',views.updateItem,name="checkout"),
+    url(r'^delete_product/$',views.delete_product,name="delete_product"),
     url(r'^checkout/$', views.checkout, name="checkout"),
     url(r'^product/<str:pk_test>/$', views.product, name="product"),
     url(r'^sell_merch/$', views.sell_merch, name="sell_merch"),
