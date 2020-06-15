@@ -401,7 +401,10 @@ def sell_merch(request):
             print(form.errors)
     else:
         form = UploadProductForm()
-    args = {'form': form}
+    user = request.user
+    seller = userInfo.objects.get(user=user)
+    listed = Product.objects.filter(user=seller)
+    args = {'form': form,'listed':listed}
     return render(request, 'nusmerch/sell_merch.html', args)
 
 def wrong_email(request):

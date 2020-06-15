@@ -102,7 +102,7 @@ class Product(models.Model):
 	filter_campus = models.CharField('Filter(Campus)', max_length=200, null = True, blank=True, choices=Campus_Residential)
 	form = models.URLField(max_length=200)
 	image = models.ImageField(upload_to='media',null=True)
-	#user = models.ForeignKey(userInfo, on_delete=models.SET_NULL,blank=True,null=True)
+	user = models.ForeignKey(userInfo, on_delete=models.SET_NULL,blank=True,null=True)
 	#slug = models.SlugField()
 
 	def __str__(self):

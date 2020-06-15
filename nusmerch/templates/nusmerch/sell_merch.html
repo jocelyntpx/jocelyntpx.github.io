@@ -39,7 +39,21 @@
 <div class="container">
 <h2 style="font-family: Montserrat-Regualr, sans-serif">MERCH Listed</h2>
 
-    <br>
+  <div class="w3-row">
+    {% for product in listed %}
+    <div class="w3-col l4 s4">
+      <img class="item center thumbnail" src="{{ product.image.url }}">
+      <div class="w3-container">
+        <h6><strong>{{product.name_of_MERCH}}</strong></h6>
+        <hr>
+        <a class="btn btn-outline-success" href="/product/">View</a>
+        <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
+        <hr>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
 </div>
 
 {% endblock %}
