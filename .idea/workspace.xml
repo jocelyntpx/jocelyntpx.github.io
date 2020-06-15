@@ -22,7 +22,6 @@
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,5 +151,13 @@
       <screen x="0" y="23" width="1440" height="809" />
     </state>
     <state x="704" y="33" key="#nusmerchd/0.23.1440.809@0.23.1440.809" timestamp="1591263407953" />
+    <state x="608" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592228675382">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="608" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.809@0.23.1440.809" timestamp="1592228675382" />
+    <state x="485" y="156" width="670" height="676" key="search.everywhere.popup" timestamp="1592228432327">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="485" y="156" width="670" height="676" key="search.everywhere.popup/0.23.1440.809@0.23.1440.809" timestamp="1592228432327" />
   </component>
 </project>
