@@ -44,13 +44,14 @@
 
   <div class="w3-row">
     {% for product in listed %}
+
     <div class="w3-col l4 s4">
       <img class="item center thumbnail" src="{{ product.image.url }}">
       <div class="w3-container">
         <h6><strong>{{product.name_of_MERCH}}</strong></h6>
         <hr>
-        <button style="flex:1" data-product="{{product.id}}" data-action="delete" class="btn btn-outline-danger add-btn delete-product" ><p>Delete Merchandise</p></button>
         <a class="btn btn-outline-success" href="/product/">View</a>
+        <button data-product="{{product.id}}" data-action="delete"  class="btn btn-outline-danger add-btn delete-product">Delete MERCH</button>
         <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
         <hr>
       </div>
@@ -60,6 +61,7 @@
   </div>
 
 {% endblock %}
+
 
 
 </body>

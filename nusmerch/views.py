@@ -407,6 +407,9 @@ def sell_merch(request):
         form = UploadProductForm(request.POST,request.FILES)
         if form.is_valid():
             product = form.save(commit=False)
+            user = request.user
+            seller = userInfo.objects.get(user=user)
+            product.user = seller
             product.save()
             products = Product.objects.filter(category="Shirt")
             context = {'products': products}
