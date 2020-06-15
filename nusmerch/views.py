@@ -173,18 +173,18 @@ def view_profile(request, pk=None):
 @login_required
 def change_password(request):
     if request.method == 'POST':
-        form = PasswordChangeForm(data=request.POST, user=request.user)
+        form = PasswordChangeForm(request.user, request.POST)
 
         if form.is_valid():
-            form.save()
-            update_session_auth_hash(request, form.user)
-            return render(request, 'nusmerch/profile.html', args)
+            user = form.save()
+            update_session_auth_hash(request, user)
+            return render(request, 'nusmerch/profile.html')
 
         else:
-            return render(request, 'nusmerch/shirt.html')
+            return render(request, 'nusmerch/change_password.html')
 
     else:
-        form = PasswordChangeForm(user=request.user)
+        form = PasswordChangeForm(request.user)
         args = {'form': form}
         return render(request, 'nusmerch/change_password.html', args)
 
