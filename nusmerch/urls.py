@@ -23,7 +23,7 @@ from django.contrib.auth import (
 from django.contrib.auth.views import (
     LoginView, LogoutView, PasswordResetView,  PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView 
 )
-
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -44,9 +44,9 @@ urlpatterns = [
     url(r'^password/reset/$', PasswordResetView.as_view(template_name='nusmerch/reset_password.html'), name='reset_password'),
     url(r'^reset-password/done/$', PasswordResetDoneView.as_view(template_name='nusmerch/reset_password_done.html'), name='password_reset_done'),
 
-    url(r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(template_name='nusmerch/reset_password_confirm.html'), name='password_reset_confirm'),
+    url(r'^reset-password/confirm/<uidb64>/<token>/$', PasswordResetConfirmView.as_view(template_name='nusmerch/reset_password_confirm.html'), name='password_reset_confirm'),
 
-    url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_done'),
+    url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_complete'),
 
     url(r'^merch/$',views.merch,name='merch'),
     url(r'^shirt/$',views.shirt,name='shirt'),
