@@ -30,6 +30,7 @@ import json
 from django.db.models import Q
 
 
+
 # Create your views here.
 def index(request):
 	return render(request,"nusmerch/index.html")
@@ -44,24 +45,24 @@ def add_user_form_submission(request):
         profile_form = UserProfileForm(request.POST,request.FILES)
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save(commit=False)
-            #user.is_active = False
+            user.is_active = False
             profile = profile_form.save(commit=False)
             user.set_password(user.password)
             user.save()
 
-     #       current_site = get_current_site(request)
-     #       mail_subject = 'Activate your NUSMERCH account.'
-      #      message = render_to_string('nusmerch/acc_active_email.html', {
-       #         'user': user,
-        #        'domain': current_site.domain,21
-         #       'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-          #      'token': account_activation_token.make_token(user),
-         #   })
-          #  to_email = form.cleaned_data.get('email')
-           # email = EmailMessage(
-            #    mail_subject, message, to=[to_email]
-           # )
-          #  email.send()
+            current_site = get_current_site(request)
+            mail_subject = 'Activate your NUSMERCH account.'
+            message = render_to_string('nusmerch/acc_active_email.html', {
+                'user': user,
+                'domain': current_site.domain,
+                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                'token': account_activation_token.make_token(user),
+            })
+            to_email = user_form.cleaned_data.get('email')
+            email = EmailMessage(
+                mail_subject, message, settings.EMAIL_HOST_USER,[to_email]
+            )
+            email.send()
 
 
             profile.user = user
@@ -75,8 +76,8 @@ def add_user_form_submission(request):
             profile.save()
             registered = True
 
-            #return HttpResponse('Please confirm your email address to complete the registration')
-            return render(request,'nusmerch/signupsuccessful.html')
+            return HttpResponse('Please confirm your email address to complete the registration')
+            #return render(request,'nusmerch/signupsuccessful.html')
         else:
             print(user_form.errors,profile_form.errors)
     else:
@@ -91,19 +92,18 @@ def add_user_form_submission(request):
 def activate(request, uidb64, token):
     try:
         uid = force_text(urlsafe_base64_decode(uidb64))
-        user = userInfo.objects.get(pk=uid)
+        user = User.objects.get(pk=uid)
     except(TypeError, ValueError, OverflowError, User.DoesNotExist):
         user = None
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
-        user.profile.email_confirmed = True
+        #user.profile.email_confirmed = True
         user.save()
-        login(request, user)
+        login_check(request,user)
         # return redirect('home')
         return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
     else:
         return HttpResponse('Activation link is invalid!')
-
 
 
 def login_form_submission(request):
@@ -149,7 +149,7 @@ def logged_in(request):
             #messages.error(request, "Invalid username or password.")
         else:
             messages.error(request, "Invalid username or password.")
-            return render(request, 'nusmerch/login.html', {})
+            return render(request, 'nusmerch/invalid_login.html', {})
     form = AuthenticationForm()
     return render(request = request,
                     template_name = "nusmerch/login.html",

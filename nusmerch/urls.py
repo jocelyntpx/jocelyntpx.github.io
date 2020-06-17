@@ -64,7 +64,7 @@ urlpatterns = [
     url(r'^sell_merch/$', views.sell_merch, name="sell_merch"),
     url(r'^search_results/$', views.search_results, name="search_results"),
 
-    url(r'^activate/<uidb64>/<token>/$', views.activate, name='activate'),
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',views.activate, name='activate'),
     url(r'^wrong_email/$', views.wrong_email, name="wrong_email"),
 
 ]
