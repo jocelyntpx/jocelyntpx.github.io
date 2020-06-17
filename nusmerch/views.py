@@ -346,9 +346,6 @@ def cart(request):
     context = {'items':items,'order':order}
     return render(request, 'nusmerch/cart.html', context)
 
-def checkout(request):
-    context = {}
-    return render(request, 'nusmerch/checkout.html', context)
 
 def delete_product(request):
     data = json.loads(request.body)

@@ -1,11 +1,39 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-<title>Sign Up Error</title>
-{% block body %}
-<div class="container">
-    <h1>Email Error</h1>
-    <p>
-        NUS email required to sign up.
-    </p>
-</div>
-{% endblock %}
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Sign Up Error</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+    <link rel="stylesheet" type="text/css"  href="{% static 'cover styling/assets/css/error.css' %}" />
+
+
+</head>
+
+<body>
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404"></div>
+			<h1>Sign Up Error</h1>
+			<h2>Oops!</h2>
+			<p>NUS email required to sign up.</p>
+			<a href="/add_user_form_submission/">Back to signup</a>
+		</div>
+	</div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+<footer>
+    Template made by Colorlib (https://colorlib.com)
+</footer>
+</html>

@@ -43,31 +43,8 @@
     </div>
     <a href="/sell_merch/" class="w3-bar-item w3-button w3-padding">Sell Merch</a>
     <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
-  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>
 
 
 {% endblock %}
 
-
-{% block product %}
-
-  <div class="w3-row">
-    {% for product in products %}
-    <div class="w3-col l4 s4">
-      <img class="item center thumbnail" src="{{ product.image.url }}">
-      <div class="w3-container">
-        <h6><strong>{{product.name_of_MERCH}}</strong></h6>
-        <hr>
-        <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart" href="javascript:void(0)" onclick="document.getElementById('cart').style.display='block'">Add to Cart</button>
-        <a class="btn btn-outline-success" href="/product/">View</a>
-        <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
-        <hr>
-      </div>
-    </div>
-    {% endfor %}
-
-  </div>
-
-{% endblock %}
