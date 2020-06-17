@@ -52,15 +52,15 @@
         <hr>
         <a class="btn btn-outline-success" href="/product/">View</a>
 
-   <!--   <button href="javascript:void(0)" class="btn btn-outline-danger" onclick="document.getElementById('delete').style.display='block'">Delete Merch</button> -->
+     <button href="javascript:void(0)" class="btn btn-outline-danger" onclick="document.getElementById('delete').style.display='block'">Delete Merch</button>
 
-        <button data-product="{{product.id}}" data-action="delete"  class="btn btn-outline-danger add-btn delete-product">Delete MERCH</button>
+    <!--    <button data-product="{{product.id}}" data-action="delete"  class="btn btn-outline-danger add-btn delete-product">Delete MERCH</button> -->
         <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
         <hr>
       </div>
     </div>
 
-<!--
+
         <div id="delete" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
     <div class="w3-container w3-white w3-center">
@@ -70,7 +70,8 @@
             <button data-product="{{product.id}}" data-action="delete"  class="btn btn-outline-danger add-btn delete-product" onclick="document.getElementById('delete').style.display='none'">Delete MERCH</button>
     </div>
   </div>
-</div> -->
+</div>
+        
     {% endfor %}
 
   </div>

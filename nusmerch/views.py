@@ -1,19 +1,14 @@
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from nusmerch.models import userInfo, Product, Order, OrderItem
 from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse
 from django.contrib import messages
 
 from django.conf import settings
-from django.core.mail import send_mail
 
 from nusmerch.forms import (
     EditProfileForm, UserForm, UserProfileForm, UploadProductForm
 )
 from django.contrib.auth import authenticate, logout, login as login_check
-from django.contrib.auth.views import (
-    PasswordResetView,  PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView 
-)
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth import login, authenticate, update_session_auth_hash
