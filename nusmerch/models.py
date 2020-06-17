@@ -92,7 +92,7 @@ class Product(models.Model):
 	filter = models.CharField(max_length=200,null=True,choices=filter_type, default='NO')
 	filter_faculty = models.CharField('Filter(Faculty)*', max_length=200, null=True, blank=True, choices=faculty_types)
 	filter_matric = models.CharField('Filter(Matric)*',max_length=10000, null = True, blank=True)
-	filter_email = models.CharField('Filter(Email)*',max_length=10000, null = True, blank=True)
+	filter_email = models.CharField('Filter(NUSNET ID)*',max_length=10000, null = True, blank=True)
 	filter_campus = models.CharField('Filter(Campus)*', max_length=200, null = True, blank=True, choices=Campus_Residential)
 	form = models.URLField('Order Form', max_length=200)
 	image = models.ImageField('Photo of MERCH**', upload_to='media',null=True)

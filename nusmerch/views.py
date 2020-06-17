@@ -71,8 +71,8 @@ def add_user_form_submission(request):
             profile.save()
             registered = True
 
-            return HttpResponse('Please confirm your email address to complete the registration')
-            #return render(request,'nusmerch/signupsuccessful.html')
+            return render(request,'nusmerch/verify.html')
+
         else:
             print(user_form.errors,profile_form.errors)
     else:
@@ -96,9 +96,9 @@ def activate(request, uidb64, token):
         user.save()
         login_check(request,user)
         # return redirect('home')
-        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+        return render(request, 'nusmerch/acct_verified.html')
     else:
-        return HttpResponse('Activation link is invalid!')
+        return render(request, 'nusmerch/invalid_link.html')
 
 
 def login_form_submission(request):
@@ -418,3 +418,9 @@ def sell_merch(request):
 
 def wrong_email(request):
     return render(request, "nusmerch/wrong_email.html")
+
+def verify(request):
+    return render(request, "nusmerch/verify.html")
+
+def acct_verified(request):
+    return render(request, "nusmerch/acct_verified.html")

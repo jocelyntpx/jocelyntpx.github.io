@@ -40,6 +40,8 @@ urlpatterns = [
     url(r'^edit_profile/$',views.edit_profile,name='edit_profile'),
     url(r'^logged_in/profile/view/$',views.view_profile,name='view_profile'),
     url(r'^change_password/$', views.change_password, name='change_password'),
+    url(r'^verify/$',views.verify,name='verify'),
+    url(r'^acct_verified/$',views.acct_verified,name='acct_verified'),
     
     url(r'^password/reset/$', PasswordResetView.as_view(template_name='nusmerch/reset_password.html'), name='reset_password'),
     url(r'^reset-password/done/$', PasswordResetDoneView.as_view(template_name='nusmerch/reset_password_done.html'), name='password_reset_done'),
