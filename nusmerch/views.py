@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from nusmerch.forms import (
-    EditProfileForm, UserForm, UserProfileForm, UploadProductForm
+    EditProfileForm, UserForm, UserProfileForm, UploadProductForm, ContactForm
 )
 from django.contrib.auth import authenticate, logout, login as login_check
 from django.contrib.auth.models import User
@@ -24,7 +24,7 @@ from django.core.mail import EmailMessage
 import json
 from django.db.models import Q
 
-
+from django.core.mail import send_mail
 
 # Create your views here.
 def index(request):
@@ -424,3 +424,25 @@ def verify(request):
 
 def acct_verified(request):
     return render(request, "nusmerch/acct_verified.html")
+
+
+def contact_form(request):
+    if request.user.is_authenticated:
+        user_email = request.user.email
+        if request.method == 'GET':
+            form = ContactForm()
+        else:
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                subject = form.cleaned_data['subject']
+                name = form.cleaned_data['name']
+                message = form.cleaned_data['message']
+                try:
+                    send_mail(subject, message, user_email, [settings.EMAIL_HOST_USER])
+                except BadHeaderError:
+                    return HttpResponse('Invalid header found.')
+                return HttpResponse('Enquiry sent.')
+        return render(request, "nusmerch/shirt.html", {'form': form})
+    else:
+        return HttpResponse('Login required.')
+
