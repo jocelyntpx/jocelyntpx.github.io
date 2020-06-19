@@ -64,6 +64,8 @@ urlpatterns = [
     url(r'^delete_product/$',views.delete_product,name="delete_product"),
     url(r'^sell_merch/$', views.sell_merch, name="sell_merch"),
     url(r'^search_results/$', views.search_results, name="search_results"),
+    url(r'^email_taken/$', views.email_taken, name="email_taken"),
+    url(r'^email_required/$', views.email_required, name="email_required"),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',views.activate, name='activate'),
     url(r'^wrong_email/$', views.wrong_email, name="wrong_email"),
     path('product/<str:pk_test>/', views.product),

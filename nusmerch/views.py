@@ -62,6 +62,12 @@ def add_user_form_submission(request):
 
             profile.user = user
             profile.email = user.email
+            if user.email == '':
+                user.delete()
+                return render(request, "nusmerch/email_required.html")
+            if User.objects.filter(email = user.email).count() == 2:
+                user.delete()
+                return render(request, "nusmerch/email_taken.html")
             if not user.email.split('@')[1] == "u.nus.edu":
                 user.delete()
                 return render(request, "nusmerch/wrong_email.html")
@@ -416,6 +422,12 @@ def sell_merch(request):
 
 def wrong_email(request):
     return render(request, "nusmerch/wrong_email.html")
+
+def email_taken(request):
+    return render(request, "nusmerch/email_taken.html")
+
+def email_required(request):
+    return render(request, "nusmerch/email_required.html")
 
 def verify(request):
     return render(request, "nusmerch/verify.html")
