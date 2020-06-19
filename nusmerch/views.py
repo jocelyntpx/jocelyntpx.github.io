@@ -116,9 +116,6 @@ def elements_page(request):
 def login(request):
 	return render(request,"nusmerch/login.html")
 
-def product(request):
-    return render(request, "nusmerch/product.html")
-
 def logged_in(request):	
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -389,9 +386,10 @@ def updateItem(request):
     
     return JsonResponse('Item was added', safe=False)
 
-def product(request, pk_test):
+def product(request,pk_test):
     product = Product.objects.get(id=pk_test)
-    return render(request, "nusmerch/product.html", product)
+    context = {'product':product}
+    return render(request, "nusmerch/product.html",context)
 
 @login_required
 def sell_merch(request):

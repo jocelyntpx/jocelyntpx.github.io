@@ -11,6 +11,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+<script type="text/javascript">
+  var user = '{{request.user}}'
+
+  function getToken(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getToken('csrftoken');
+</script>
 
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
@@ -76,7 +96,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
       {% block head %}
-          <p class="w3-left">MERCH Details</p>
+          <p class="w3-left">Merchandise Details</p>
       {% endblock %}
 
     <p class="w3-right">
@@ -105,7 +125,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <!--Grid column-->
         <div class="col-md-6 mb-4">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid" alt="">
+          <img src="{{ product.image.url }}" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
@@ -116,37 +136,21 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           <!--Content-->
           <div class="p-4">
 
-            <div class="mb-3">
-              <a href="">
-                <span class="badge purple mr-1">{{ object.get_category_display }}</span>
-                <img src="{{ product.image.url }}" width="240">
-              </a>
-            </div>
+            <p class="lead font-weight-bold" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:40px;" >{{product.name_of_MERCH}}</p>
 
-            <p class="lead">
-              <span>${{ object.price }}</span>
-            </p>
+            <p class="lead font-weight-bold">Organisation:</p>
+            <p>{{ product.organisation }}</p>
 
-            <p class="lead font-weight-bold">Description</p>
-
+            <p class="lead font-weight-bold">Category:</p>
             <p>{{ product.category }}</p>
 
-            {% comment %} <form class="d-flex justify-content-left">
+            <p class="lead font-weight-bold">Price:</p>
+              <span>${{ product.price }}</span>
+            </p>
               <!-- Default input -->
-              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-              <button class="btn btn-primary btn-md my-0 p" type="submit">
-                Add to cart
-                <i class="fas fa-shopping-cart ml-1"></i>
-              </button>
+              <button data-product={{product.id}} data-action="add" class="btn btn-primary btn-md my-0 p add-btn update-cart" style="height: 50px" href="javascript:void(0)" onclick="document.getElementById('cart').style.display='block'">Add to Cart</button>
+              <button style="flex:1" data-product="{{product.id}}" data-action="removeAll" class="btn btn-danger btn-md my-0 p add-btn update-cart"  ><p>Remove Item</p></button>
 
-            </form> {% endcomment %}
-            <a href="{{ product.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">
-              Add to cart
-              <i class="fas fa-shopping-cart ml-1"></i>
-            </a>
-            <a href="{{ product.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">
-              Remove from cart
-            </a>
 
           </div>
           <!--Content-->
@@ -165,12 +169,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <!--Grid column-->
         <div class="col-md-6 text-center">
 
-          <h4 class="my-4 h4">Additional information</h4>
+          <h4 class="my-4 h4">Description</h4>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit
-            voluptates,
-            quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+          <p>{{ product.description }}</p>
 
+
+          <h4 class="my-4 h4">Sizing</h4>
+            <span class="badge purple mr-1">{{ object.get_category_display }}</span>
+            <img src="{{ product.sizing.url }}" width="500">
         </div>
         <!--Grid column-->
 
