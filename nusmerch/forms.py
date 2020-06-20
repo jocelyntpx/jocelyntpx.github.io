@@ -37,7 +37,7 @@ class UploadProductForm(forms.ModelForm):
     class Meta():
         model = Product
         fields = (
-            'name_of_MERCH','price','organisation','category','filter','filter_faculty',
+            'name_of_MERCH','price','description','organisation','category','filter','filter_faculty',
             'filter_matric', 'filter_email', 'filter_campus','form','image', 'sizing'
         )
         widgets={

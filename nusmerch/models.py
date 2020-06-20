@@ -86,8 +86,8 @@ class Product(models.Model):
 		('NIL', 'Do Not Stay On Campus'),
 	]
 	name_of_MERCH = models.CharField(max_length=200,null=True)
-	description = models.CharField(max_length=200,null=True)
 	price = models.DecimalField(decimal_places=2,max_digits=5)
+	description = models.CharField('Description/Details', max_length=200, null=True)
 	organisation = models.CharField(max_length=200,null=True)
 	category = models.CharField(max_length=200,null=True,choices=cat)
 	filter = models.CharField(max_length=200,null=True,choices=filter_type, default='NO')
