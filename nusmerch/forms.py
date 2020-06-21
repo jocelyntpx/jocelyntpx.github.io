@@ -44,8 +44,3 @@ class UploadProductForm(forms.ModelForm):
             'category':forms.Select(attrs={'style':'width:220px'}),
             'filter': forms.Select(attrs={'style': 'width:220px'})
         }
-
-class ContactForm(forms.Form):
-    name = forms.CharField(required=True)
-    subject = forms.CharField(required=True)
-    message = forms.CharField(widget=forms.Textarea, required=True)

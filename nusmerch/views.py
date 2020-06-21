@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from nusmerch.forms import (
-    EditProfileForm, UserForm, UserProfileForm, UploadProductForm, ContactForm
+    EditProfileForm, UserForm, UserProfileForm, UploadProductForm
 )
 from django.contrib.auth import authenticate, logout, login as login_check
 from django.contrib.auth.models import User
@@ -202,7 +202,7 @@ def merch(request):
         customer_email = request.user.email
         customer = userInfo.objects.get(email=customer_email)
         order, created = Order.objects.get_or_create(customer=customer,complete=False)
-        items = order.orderItem_set.all()
+        items = OrderItem.objects.filter(order=order)
         cartItems = order.get_cart_items
     else:
         items = []
@@ -435,24 +435,25 @@ def verify(request):
 def acct_verified(request):
     return render(request, "nusmerch/acct_verified.html")
 
-
-def contact_form(request):
+def contact(request):
     if request.user.is_authenticated:
-        user_email = request.user.email
-        if request.method == 'GET':
-            form = ContactForm()
-        else:
-            form = ContactForm(request.POST)
-            if form.is_valid():
-                subject = form.cleaned_data['subject']
-                name = form.cleaned_data['name']
-                message = form.cleaned_data['message']
-                try:
-                    send_mail(subject, message, user_email, [settings.EMAIL_HOST_USER])
-                except BadHeaderError:
-                    return HttpResponse('Invalid header found.')
-                return HttpResponse('Enquiry sent.')
-        return render(request, "nusmerch/shirt.html", {'form': form})
-    else:
-        return HttpResponse('Login required.')
+        products = Product.objects.filter(category="Shirt")
+        
+        if request.method == "POST":
+            message_name = request.POST['message-name']
+            message_email = request.POST['message-email']
+            message = request.POST['message']
 
+            #send mail
+            email = EmailMessage(
+                'Enquiry from ' + message_name,
+                message,
+                message_email,
+                [settings.EMAIL_HOST_USER],
+            )
+            email.send()
+
+        context = {'products':products,'message_name':message_name}
+        return render(request, 'nusmerch/shirt.html', context)
+    else:
+        return render(request, 'nusmerch/shirt.html', {})

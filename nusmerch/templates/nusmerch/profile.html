@@ -20,8 +20,13 @@
 {% endblock %}
 
 {% block body %}
+      <!--Content-->
 <div class="container">
-    <h1 style="font-family: Montserrat-Regualr, sans-serif">PROFILE</h1>
+    <h1 style="font-family: Impact">PROFILE</h1>
+    {% if user.userinfo.image %}
+    <img src="{{ user.userinfo.image.url }}" width="240">
+    {% endif %}
+    <br/><br/>
     <p>Username: {{ user }}</p>
     <p>Name: {{ user.userinfo.name }}</p>
     <p>Email: {{ user.userinfo.email }}</p>
@@ -29,9 +34,7 @@
     <p>Faculty: {{ user.userinfo.faculty }}</p>
     <p>Matric: {{user.userinfo.matric}}</p>
     <p>Campus Residential Type: {{user.userinfo.campus_residential_type}}</p>
-    {% if user.userinfo.image %}
-    <img src="{{ user.userinfo.image.url }}" width="240">
-    {% endif %}
+
 </div>
 
 {% endblock %}
