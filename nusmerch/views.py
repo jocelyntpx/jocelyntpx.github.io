@@ -438,6 +438,16 @@ def acct_verified(request):
 def contact(request):
     if request.user.is_authenticated:
         products = Product.objects.filter(category="Shirt")
+        user = request.user
+        profile = userInfo.objects.get(user=user)
+        pdt_nil = products.filter(filter="NO")
+        pdt_faculty = products.filter(filter_faculty=profile.faculty)
+        pdt_email = products.filter(filter_email__icontains=profile.email)
+        pdt_matric = products.filter(filter_matric__icontains=profile.matric)
+        pdt_campus = products.filter(filter_campus=profile.campus_residential_type)
+        products = pdt_faculty | pdt_campus | pdt_nil | pdt_matric | pdt_email
+
+        context = {'products': products}
         
         if request.method == "POST":
             message_name = request.POST['message-name']

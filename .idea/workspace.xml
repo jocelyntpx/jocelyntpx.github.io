@@ -22,11 +22,9 @@
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/sell_merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/sell_merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +132,7 @@
       <workItem from="1592465324804" duration="3352000" />
       <workItem from="1592574532910" duration="3003000" />
       <workItem from="1592633389024" duration="1554000" />
+      <workItem from="1592755492961" duration="967000" />
     </task>
     <servers />
   </component>
