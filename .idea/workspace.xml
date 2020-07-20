@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/invalid_link.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/invalid_link.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +132,9 @@
       <workItem from="1592574532910" duration="3003000" />
       <workItem from="1592633389024" duration="1554000" />
       <workItem from="1592755492961" duration="1220000" />
-      <workItem from="1593246364192" duration="323000" />
+      <workItem from="1593246364192" duration="581000" />
+      <workItem from="1594628275795" duration="1991000" />
+      <workItem from="1595226965066" duration="3925000" />
     </task>
     <servers />
   </component>
