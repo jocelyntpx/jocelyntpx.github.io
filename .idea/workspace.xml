@@ -22,8 +22,7 @@
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/invalid_link.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/invalid_link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +133,7 @@
       <workItem from="1592755492961" duration="1220000" />
       <workItem from="1593246364192" duration="581000" />
       <workItem from="1594628275795" duration="1991000" />
-      <workItem from="1595226965066" duration="3925000" />
+      <workItem from="1595226965066" duration="5699000" />
     </task>
     <servers />
   </component>
