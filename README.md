@@ -1,1 +1,3 @@
 # nusmerchd
+User Guide:
+Website: 
