@@ -32,8 +32,6 @@ urlpatterns = [
 	url(r'^add_user/$',views.addUser,name='add_user'),
 	url(r'^add_user_form_submission/$',views.add_user_form_submission,name='add_user_form_submission'),
 	url(r'^home_page/$',views.home_page,name='home_page'),
-	url(r'^about_page/$',views.about_page,name='about_page'),
-	url(r'^elements_page/$',views.elements_page,name='elements_page'),
     url(r'^login/$', LoginView.as_view(template_name='nusmerch/login.html'), name="login"),
     url(r'^logged_in/$',views.logged_in,name='logged_in'),
     url(r'^logout/$', LogoutView.as_view(template_name='nusmerch/index.html'), name="logout"),

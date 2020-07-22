@@ -113,12 +113,6 @@ def login_form_submission(request):
 def home_page(request):
 	return render(request, "nusmerch/index.html")
 
-def about_page(request):
-	return render(request, "nusmerch/generic.html")
-
-def elements_page(request):
-	return render(request, "nusmerch/elements.html")
-
 def login(request):
 	return render(request,"nusmerch/login.html")
 

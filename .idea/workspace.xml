@@ -20,9 +20,122 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/bottom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/fashion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/laptop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/lifestyle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/others.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/shirts.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/images/banner2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/images/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/images/pic01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/images/pic02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/images/pic03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/images/pic04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/cover styling/images/pic05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/iconic/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/iconic/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up fonts/fonts/poppins/Poppins-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css/main2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/images/icons/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/animate/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/animsition/css/animsition.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/animsition/css/animsition.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/animsition/js/animsition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/animsition/js/animsition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/countdowntime/countdowntime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/daterangepicker/daterangepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/daterangepicker/daterangepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/daterangepicker/moment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/daterangepicker/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/select2/select2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/vendor/select2/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/merch(cdn).js" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/merch(cdn).js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/acct_verified.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/acct_verified.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/generic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/invalid_link.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/invalid_link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/invalid_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/invalid_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/laptop.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/laptop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/lifestyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/lifestyle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/others.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/others.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/outerwear.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/outerwear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/wrong_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/wrong_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +166,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/nusmerch/static/login _ sign up styling" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -63,11 +176,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nusmerch/static/login _ sign up styling" />
+      <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css" />
+      <recent name="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nusmerch/static/images" />
+      <recent name="$PROJECT_DIR$/nusmerch/static" />
       <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/images" />
       <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css" />
-      <recent name="$PROJECT_DIR$/nusmerch/static" />
-      <recent name="$PROJECT_DIR$/nusmerch/static/images" />
       <recent name="$PROJECT_DIR$/nusmerch/templates/nusmerch" />
     </key>
   </component>
@@ -133,7 +251,8 @@
       <workItem from="1592755492961" duration="1220000" />
       <workItem from="1593246364192" duration="581000" />
       <workItem from="1594628275795" duration="1991000" />
-      <workItem from="1595226965066" duration="5699000" />
+      <workItem from="1595226965066" duration="6525000" />
+      <workItem from="1595406572777" duration="14674000" />
     </task>
     <servers />
   </component>
@@ -153,11 +272,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592387345559">
-      <screen x="0" y="23" width="1440" height="809" />
+    <state x="514" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595420100659">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.809@0.23.1440.809" timestamp="1592387345559" />
-    <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.811@0.23.1440.811" timestamp="1591864638008" />
+    <state x="514" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.811@0.23.1440.811" timestamp="1595420100659" />
+    <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595419571173">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="707" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.809@0.23.1440.809" timestamp="1595406860386" />
+    <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.811@0.23.1440.811" timestamp="1595419571173" />
     <state x="704" y="33" key="#nusmerchd" timestamp="1591263407953">
       <screen x="0" y="23" width="1440" height="809" />
     </state>

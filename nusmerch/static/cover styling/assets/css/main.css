@@ -1707,7 +1707,7 @@
 
 	body, input, select, textarea {
 		color: #767d85;
-		font-family: "Open Sans", Arial, Helvetica, sans-serif;
+		font-family: MarkerFelt-Thin;
 		font-size: 13pt;
 		font-weight: 300;
 		line-height: 1.65;
@@ -1776,9 +1776,9 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #727a82;
+		color: #908380;
 		font-weight: 700;
-		font-family: "Montserrat", sans-serif;
+		font-family: MarkerFelt-Wide;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
 	}
@@ -2495,7 +2495,7 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #232b2b;
+		background-color: #84A9D9 ;
 		border-radius: 4px;
 		border: 0;
 		color: #ffffff;
@@ -2524,7 +2524,7 @@
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: #232b2b;
+			background-color: #BED2EC ;
 		}
 
 		input[type="submit"].icon,
@@ -2608,7 +2608,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #232b2b;
+			background-color: #BED2EC ;
 			color: #ffffff !important;
 		}
 
@@ -2625,7 +2625,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #232b2b;
+				background-color: #BED2EC ;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
