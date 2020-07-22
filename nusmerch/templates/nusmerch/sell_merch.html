@@ -23,8 +23,8 @@
 
 {% block body %}
 <div class="container">
-<h1 style="font-family: Montserrat-Regualr, sans-serif">Sell MERCH</h1>
-	<form class="contact-form" method="POST" action="/sell_merch/" enctype='multipart/form-data'>
+<h1 style="font-family:MarkerFelt-Thin">I want to sell some merchandise</h1>
+	<form class="contact-form" method="POST" action="/sell_merch/" enctype='multipart/form-data' style="font-family:MarkerFelt-Thin">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="login100-form-btn">
@@ -40,7 +40,7 @@
 <hr>
 
 <body class="container">
-<h2 style="font-family: Montserrat-Regualr, sans-serif">MERCH Listed</h2>
+<h2 style="font-family: MarkerFelt-Thin">My Merchandise</h2>
 
   <div class="w3-row">
     {% for product in listed %}
