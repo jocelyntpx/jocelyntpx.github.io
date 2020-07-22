@@ -100,6 +100,7 @@ class Product(models.Model):
 	backview = models.ImageField('Backview of MERCH', upload_to='media',null=True)
 	sizing = models.ImageField('Sizing Chart', upload_to='media',null=True)
 	user = models.ForeignKey(userInfo, on_delete=models.SET_NULL,blank=True,null=True)
+	iglink = models.URLField('Instagram AD', max_length=200)
 	#slug = models.SlugField()
 
 	def __str__(self):

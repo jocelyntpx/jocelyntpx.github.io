@@ -38,7 +38,7 @@ class UploadProductForm(forms.ModelForm):
         model = Product
         fields = (
             'name_of_MERCH','price','description','organisation','category','filter','filter_faculty',
-            'filter_matric', 'filter_email', 'filter_campus','form','image', 'sizing','backview'
+            'filter_matric', 'filter_email', 'filter_campus','form','image', 'sizing','backview','iglink'
         )
         widgets={
             'category':forms.Select(attrs={'style':'width:220px'}),

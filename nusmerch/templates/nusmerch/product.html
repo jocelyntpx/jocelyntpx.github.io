@@ -146,6 +146,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
               <span>${{ product.price }}</span>
             </p>
 
+            <p class="lead font-weight-bold">Posted By:</p>
+            <p>{{ product.user }}</p>
+
               <br>
               <!-- Default input -->
               <button data-product={{product.id}} data-action="add" class="btn btn-primary btn-md my-0 p add-btn update-cart" style="height: 50px" href="javascript:void(0)" onclick="document.getElementById('cart2').style.display='block'">Add to Cart</button>
@@ -182,41 +185,20 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           <h4 class="my-4 h4">Sizing</h4>
             <span class="badge purple mr-1">{{ object.get_category_display }}</span>
             <img src="{{ product.sizing.url }}" width="500">
+
+          <h4 class="my-4 h4">Social Media Links</h4>
+            <span class="badge purple mr-1">{{ object.get_category_display }}</span>
+            <img src="{% static  'images/instagram logo.png' %}" width="100">
+            <button style="overflow:hidden;" class="btn btn-outline-success" > <a target=_blank {{product.iglink|urlize}} ></a></button>
+
+
+
+
         </div>
+
         <!--Grid column-->
 
       </div>
-
-        <br>
-      <!--Grid row-->
-
-      <!--Grid row-->
- <!--     <div class="row wow fadeIn">
-
-
-        <div class="col-lg-4 col-md-12 mb-4">
-
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
-
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
-
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
-
-        </div> -->
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
-    </div>
   </main>
 
 {% endblock content %}
