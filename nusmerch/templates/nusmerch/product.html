@@ -178,19 +178,24 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
           <p>{{ product.description }}</p>
 
+          {% if product.backview %}
           <h4 class="my-4 h4">Extra Images</h4>
           <span class="badge purple mr-1">{{ object.get_category_display }}</span>
           <img src="{{ product.backview.url }}" width="200">
+          {% endif %}
 
+          {% if product.sizing %}
           <h4 class="my-4 h4">Sizing</h4>
             <span class="badge purple mr-1">{{ object.get_category_display }}</span>
             <img src="{{ product.sizing.url }}" width="500">
+            {% endif %}
 
+          {% if product.iglink %}
           <h4 class="my-4 h4">Social Media Links</h4>
             <span class="badge purple mr-1">{{ object.get_category_display }}</span>
             <img src="{% static  'images/instagram logo.png' %}" width="100">
             <button style="overflow:hidden;" class="btn btn-outline-success" > <a target=_blank {{product.iglink|urlize}} ></a></button>
-
+          {% endif %}
         </div>
 
         <!--Grid column-->

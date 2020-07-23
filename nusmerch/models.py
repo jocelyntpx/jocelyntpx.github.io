@@ -97,10 +97,10 @@ class Product(models.Model):
 	filter_campus = models.CharField('Filter(Campus)*', max_length=200, null = True, blank=True, choices=Campus_Residential)
 	form = models.URLField('Order Form', max_length=200)
 	image = models.ImageField('Photo of MERCH**', upload_to='media',null=True)
-	backview = models.ImageField('Backview of MERCH', upload_to='media',null=True)
-	sizing = models.ImageField('Sizing Chart', upload_to='media',null=True)
+	backview = models.ImageField('Backview of MERCH', upload_to='media',null=True,blank=True)
+	sizing = models.ImageField('Sizing Chart', upload_to='media',null=True,blank=True)
 	user = models.ForeignKey(userInfo, on_delete=models.SET_NULL,blank=True,null=True)
-	iglink = models.URLField('Instagram AD', max_length=200)
+	iglink = models.URLField('Instagram AD', max_length=200,null=True,blank=True)
 	#slug = models.SlugField()
 
 	def __str__(self):

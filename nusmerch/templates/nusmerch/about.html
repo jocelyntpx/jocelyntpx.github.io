@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE HTML>
 <html>
@@ -6,6 +7,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="{% static 'cover styling/assets/css/main.css' %}" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 	</head>
 	<body class="subpage">
 
@@ -30,36 +33,55 @@
 					<li><a href="/login/" class="button fit">Log in</a></li>
 				</ul>
 			</nav>
+			<br>
+			<header class="align-center">
+				<h1>About Page</h1>
+				<br>
+			</header>
+	</body>
 
-		<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="inner">
-					<header class="align-center">
-						<h1>About Page</h1>
-						<br>
-					</header>
+	<div class="w3-main" >
+		{% block content %}
+		
+		<main class="mt-5 pt-4">
+			<div class="container dark-grey-text mt-5">
 
-					<div class="image fit">
-						<img src="{% static  'images/about2.png' %}"/>
-
-                    </div>
-                    <div style="display:inline-block">
-                        <br>
-                        <p>More often than not, many clubs and faculties use their Instagram page as their only platform
-                        for their merchandise sales. But other than your own faculty’s Instagram page, who else do
-                        you follow? Thus, we often miss out on some really nice NUS t-shirts that we want to buy
-                        but have no idea which committee or faculty sells it! Hence, you start stalking all the halls
-                        and faculty’s instagram page but to no avail… You start thinking to yourself why can’t there
-                        be a central website where everyone can put up their merchandise sales so that everyone has
-                        perfect information about the available merchandise and do not have to rely on connections
-                        just to get a nice NUS shirt. </p>
-                    <p>As such, we hope that this website will be able to make it easier and more convenient for NUS students
-                        to support NUS fundraisers when getting NUS merchandise.</p>
-					</div>
-
-
+			  <!--Grid row-->
+			  <div class="row wow fadeIn">
+		
+				<!--Grid column-->
+				<div class="col-md-6 mb-4">
+		
+					<img src="{% static  'images/about.png' %}" width="480" />
 				</div>
-			</section>
+				<div class="col-md-6 mb-4">
+		
+				  <!--Content-->
+				  <div class="p-4">
+					<br>
+					<h5 style="font-family: MarkerFelt-thin">
+					<p>More often than not, many clubs and faculties use their Instagram page as their only platform
+						for their merchandise sales. But other than your own faculty’s Instagram page, who else do
+						you follow? Thus, we often miss out on some really nice NUS t-shirts that we want to buy
+						but have no idea which committee or faculty sells it! Hence, you start stalking all the halls
+						and faculty’s instagram page but to no avail… You start thinking to yourself why can’t there
+						be a central website where everyone can put up their merchandise sales so that everyone has
+						perfect information about the available merchandise and do not have to rely on connections
+						just to get a nice NUS shirt. </p>
+					<p>As such, we hope that this website will be able to make it easier and more convenient for NUS students
+						to support NUS fundraisers when getting NUS merchandise.</p>
+					</h5>
+				
+					<br>
+				</div>
+			</div>
+
+		</main>
+	</div>
+
+	{% endblock content %}
+	
+	
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -79,5 +101,5 @@
 			<script src="{% static 'cover styling/assets/js/util.js'%}" ></script>
 			<script src="{% static 'cover styling/assets/js/main.js'%}" ></script>
 
-	</body>
+
 </html>
