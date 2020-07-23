@@ -45,6 +45,16 @@ def add_user_form_submission(request):
             user.set_password(user.password)
             user.save()
 
+            if user.email == '':
+                user.delete()
+                return render(request, "nusmerch/email_required.html")
+            if User.objects.filter(email = user.email).count() == 2:
+                user.delete()
+                return render(request, "nusmerch/email_taken.html")
+            if not user.email.split('@')[1] == "u.nus.edu":
+                user.delete()
+                return render(request, "nusmerch/wrong_email.html")
+
             current_site = get_current_site(request)
             mail_subject = 'Activate your NUSMERCH account.'
             message = render_to_string('nusmerch/acc_active_email.html', {
@@ -62,15 +72,7 @@ def add_user_form_submission(request):
 
             profile.user = user
             profile.email = user.email
-            if user.email == '':
-                user.delete()
-                return render(request, "nusmerch/email_required.html")
-            if User.objects.filter(email = user.email).count() == 2:
-                user.delete()
-                return render(request, "nusmerch/email_taken.html")
-            if not user.email.split('@')[1] == "u.nus.edu":
-                user.delete()
-                return render(request, "nusmerch/wrong_email.html")
+
           #  if 'profile_pic' in request.FILES:
             #    print('found it')
           #      profile.image = request.FILES['profile_pic']
@@ -112,6 +114,9 @@ def login_form_submission(request):
 
 def home_page(request):
 	return render(request, "nusmerch/index.html")
+
+def about_page(request):
+	return render(request, "nusmerch/about.html")
 
 def login(request):
 	return render(request,"nusmerch/login.html")
