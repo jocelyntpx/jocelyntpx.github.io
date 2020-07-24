@@ -20,23 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/about.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/about2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/static/merch.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/merch.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/buttom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/laptop.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/laptop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/lifestyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/lifestyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/others.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/others.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/outerwear.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/outerwear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/sell_merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/sell_merch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/shirt.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerchd/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerchd/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +152,8 @@
       <workItem from="1595406572777" duration="14674000" />
       <workItem from="1595433378354" duration="1457000" />
       <workItem from="1595480887209" duration="95000" />
-      <workItem from="1595480999940" duration="6973000" />
+      <workItem from="1595480999940" duration="7413000" />
+      <workItem from="1595574853784" duration="6025000" />
     </task>
     <servers />
   </component>

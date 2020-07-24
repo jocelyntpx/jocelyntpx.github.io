@@ -23,7 +23,8 @@
 
 {% block body %}
 <div class="container">
-<h1 style="font-family:MarkerFelt-Thin">I want to sell some merchandise</h1>
+<h2 style="font-family:MarkerFelt-Thin">I want to sell some merchandise</h1>
+<br>
 	<form class="contact-form" method="POST" action="/sell_merch/" enctype='multipart/form-data' style="font-family:MarkerFelt-Thin">
         {% csrf_token %}
         {{ form.as_p }}
@@ -41,7 +42,7 @@
 
 <body class="container">
 <h2 style="font-family: MarkerFelt-Thin">My Merchandise</h2>
-
+<br>
   <div class="w3-row">
     {% for product in listed %}
 
@@ -62,7 +63,5 @@
   </div>
 
 {% endblock %}
-
-
 
 </body>
