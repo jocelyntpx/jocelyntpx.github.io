@@ -37,39 +37,39 @@ var csrftoken = getToken('csrftoken');
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
 
-<body class="w3-content" style="max-width:1200px" >
+<body class="w3-content" style="max-width:1200px;background-color: #202020;" >
 
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b>NUSMERCH</b></h3>
+    <h3 class="w3-wide" style="color: steelblue;"><b>NUSMERCH</b></h3>
   </div>
 
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
 
-      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-black w3-left-align" id="myBtn">
       Apparel  <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="/shirt/" class="w3-bar-item w3-button ">Shirts</a>
-      <a href="/bottom/" class="w3-bar-item w3-button">Bottom</a>
-      <a href="/outerwear/" class="w3-bar-item w3-button">Outerwear</a>
+      <a href="/shirt/" style="color: steelblue;" class="w3-bar-item w3-button ">Shirts</a>
+      <a href="/bottom/" style="color: steelblue;"class="w3-bar-item w3-button">Bottom</a>
+      <a href="/outerwear/" style="color: steelblue;"class="w3-bar-item w3-button">Outerwear</a>
     </div>
 
 
-    <a href="/lifestyle/" class="w3-bar-item w3-button">Lifestyle</a>
-    <a href="/laptop/" class="w3-bar-item w3-button">Laptop Accessories</a>
-    <a href="/others/" class="w3-bar-item w3-button">Others</a>
+    <a href="/lifestyle/" style="color: white"class="w3-bar-item w3-button">Lifestyle</a>
+    <a href="/laptop/" style="color: white;"class="w3-bar-item w3-button">Laptop Accessories</a>
+    <a href="/others/" style="color: white" class="w3-bar-item w3-button">Others</a>
   </div>
 
 
-    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-black w3-left-align" id="myBtn">
       User Account  <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="{% url 'nusmerch:view_profile' %}" class="w3-bar-item w3-button">Profile Details</a>
-      <a href="{% url 'nusmerch:edit_profile' %}" class="w3-bar-item w3-button">Edit Profile</a>
-      <a href="{% url 'nusmerch:change_password' %}" class="w3-bar-item w3-button">Change Password</a>
+      <a href="{% url 'nusmerch:view_profile' %}"style="color: steelblue;" class="w3-bar-item w3-button">Profile Details</a>
+      <a href="{% url 'nusmerch:edit_profile' %}" style="color: steelblue;"class="w3-bar-item w3-button">Edit Profile</a>
+      <a href="{% url 'nusmerch:change_password' %}" style="color: steelblue;"class="w3-bar-item w3-button">Change Password</a>
     </div>
     <a href="/sell_merch/" class="w3-bar-item w3-button w3-padding">Sell Merch</a>
     <a href="/shirt/" class="w3-bar-item w3-button w3-padding">Contact</a>
@@ -94,7 +94,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
       {% block head %}
-          <p class="w3-left">Merchandise Details</p>
+          <p  style="color: white;font-size: 30px;" class="w3-left">Merchandise Details</p>
       {% endblock %}
 
     <p class="w3-right">
@@ -123,7 +123,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <!--Grid column-->
         <div class="col-md-6 mb-4">
 
-          <img src="{{ product.image.url }}" class="img-fluid" alt="">
+          <img src="{{ product.image.url }}" style="color: white class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
@@ -134,20 +134,20 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           <!--Content-->
           <div class="p-4">
 
-            <p class="lead font-weight-bold" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:40px;" >{{product.name_of_MERCH}}</p>
+            <p class="lead font-weight-bold" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:40px; color: white;" >{{product.name_of_MERCH}}</p>
 
-            <p class="lead font-weight-bold">Organisation:</p>
-            <p>{{ product.organisation }}</p>
+            <p style="color: white" class="lead font-weight-bold">Organisation:</p>
+            <p> style="color: steelblue"{{ product.organisation }}</p>
 
-            <p class="lead font-weight-bold">Category:</p>
-            <p>{{ product.category }}</p>
+            <p style="color: white" class="lead font-weight-bold">Category:</p>
+            <p style="color: steelblue">{{ product.category }}</p>
 
-            <p class="lead font-weight-bold">Price:</p>
-              <span>${{ product.price }}</span>
+            <p style="color: white "class="lead font-weight-bold">Price:</p>
+              <span style="color: steelblue">${{ product.price }}</span>
             </p>
 
-            <p class="lead font-weight-bold">Posted By:</p>
-            <p>{{ product.user }}</p>
+            <p style="color: white "class="lead font-weight-bold">Posted By:</p>
+            <p style="color: steelblue">{{ product.user }}</p>
 
               <br>
               <!-- Default input -->
@@ -174,27 +174,27 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <!--Grid column-->
         <div class="col-md-6 text-center">
 
-          <h4 class="my-4 h4">Description</h4>
+          <h4 style="color: white" class="my-4 h4">Description</h4>
 
-          <p>{{ product.description }}</p>
+          <p style="color: steelblue">{{ product.description }}</p>
 
           {% if product.backview %}
-          <h4 class="my-4 h4">Extra Images</h4>
+          <h4 class="my-4 h4"style="color: white" >Extra Images</h4>
           <span class="badge purple mr-1">{{ object.get_category_display }}</span>
           <img src="{{ product.backview.url }}" width="200">
           {% endif %}
 
           {% if product.sizing %}
-          <h4 class="my-4 h4">Sizing</h4>
+          <h4 class="my-4 h4"style="color: white" >Sizing</h4>
             <span class="badge purple mr-1">{{ object.get_category_display }}</span>
             <img src="{{ product.sizing.url }}" width="500">
             {% endif %}
 
           {% if product.iglink %}
-          <h4 class="my-4 h4">Social Media Links</h4>
+          <h4 class="my-4 h4"style="color: white" >Social Media Links</h4>
             <span class="badge purple mr-1">{{ object.get_category_display }}</span>
             <img src="{% static  'images/instagram logo.png' %}" width="100">
-            <button style="overflow:hidden;" class="btn btn-outline-success" > <a target=_blank {{product.iglink|urlize}} ></a></button>
+            <button style="overflow:hidden;" class="btn btn-outline-success" > <a style="color: steelblue"  target=_blank {{product.iglink|urlize}} ></a></button>
           {% endif %}
         </div>
 
