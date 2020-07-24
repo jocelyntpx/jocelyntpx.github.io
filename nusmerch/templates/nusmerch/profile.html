@@ -21,30 +21,26 @@
 
 {% block body %}
       <!--Content-->
+    <div class="inner">
       <div class="row wow fadeIn">
-
         <!--Grid column-->
         <div class="col-md-6 mb-4">
-          <h1 style="font-family: MarkerFelt-thin;color: white;">My Profile</h1>
+          <h1 style="font-family: MarkerFelt-thin;color: white;">MY PROFILE</h1>
         <br>
           {% if user.userinfo.image %}
           <img src="{{ user.userinfo.image.url }}" width="340">
           {% endif %}
           <br/><br/>
-      
         </div>
-        <!--Grid column-->
       
         <!--Grid column-->
         <div class="col-md-6 mb-4">
-      
           <!--Content-->
           <div class="p-4" style="color:white;">
             <br>
             <br>
             <br>
             <br>
-
             <h5 style="font-family: MarkerFelt-thin" >
               <p>Username: {{ user }}</p>
               <p>Name: {{ user.userinfo.name }}</p>
@@ -54,17 +50,11 @@
               <p>Matric: {{user.userinfo.matric}}</p>
               <p>Campus Residential Type: {{user.userinfo.campus_residential_type}}</p>
             </h5>
-      
               <br>
-      
           </div>
-      
-          <!--Content-->
-      
         </div>
-        <!--Grid column-->
-      
       </div>
+    </div>
 
 {% endblock %}
 

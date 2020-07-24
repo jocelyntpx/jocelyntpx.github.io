@@ -19,7 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="" />
+    <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nusmerch/static/images/up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/static/merch.css" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/static/merch.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/merch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,17 +71,17 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nusmerch/static/login _ sign up styling" />
+      <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css" />
+      <recent name="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/nusmerch/static/images" />
       <recent name="$PROJECT_DIR$/nusmerch/static" />
       <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/images" />
       <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css" />
       <recent name="$PROJECT_DIR$/nusmerch/templates/nusmerch" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/nusmerch/static/login _ sign up styling" />
-      <recent name="$PROJECT_DIR$/nusmerch/static/cover styling/assets/css" />
-      <recent name="$PROJECT_DIR$/nusmerch/static/login _ sign up styling/images" />
     </key>
   </component>
   <component name="RunManager">
@@ -140,6 +152,7 @@
       <workItem from="1595480887209" duration="95000" />
       <workItem from="1595480999940" duration="7413000" />
       <workItem from="1595574853784" duration="6377000" />
+      <workItem from="1595609515667" duration="2857000" />
     </task>
     <servers />
   </component>

@@ -82,9 +82,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 					<div style="flex:1">
 						<p class="quantity" style="color:white" >{{item.quantity}}</p>
 						<div class="quantity">
-							<img data-product="{{item.product.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}"width="20">
+							<img data-product="{{item.product.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'images/up.png' %}"width="20">
 					
-							<img data-product="{{item.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}"width="20">
+							<img data-product="{{item.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/down.png' %}"width="20">
 						</div>
 					</div>
 				<button style="flex:1" data-product="{{item.product.id}}" data-action="removeAll" class="btn btn-outline-danger add-btn update-cart" ><p>Remove Item</p></button>
