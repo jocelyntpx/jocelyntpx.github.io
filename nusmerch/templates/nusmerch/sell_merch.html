@@ -9,13 +9,13 @@
 </head>
 
 {% block menu2 %}
-    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-black w3-left-align" id="myBtn">
       User Account  <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="{% url 'nusmerch:view_profile' %}" class="w3-bar-item w3-button">Profile Details</a>
-      <a href="{% url 'nusmerch:edit_profile' %}" class="w3-bar-item w3-button">Edit Profile</a>
-      <a href="{% url 'nusmerch:change_password' %}" class="w3-bar-item w3-button">Change Password</a>
+      <a href="{% url 'nusmerch:view_profile' %}" style="color: steelblue;"class="w3-bar-item w3-button">Profile Details</a>
+      <a href="{% url 'nusmerch:edit_profile' %}" style="color: steelblue;"class="w3-bar-item w3-button">Edit Profile</a>
+      <a href="{% url 'nusmerch:change_password' %}" style="color: steelblue;"class="w3-bar-item w3-button">Change Password</a>
     </div>
 
     <a href="/sell_merch/" class="w3-bar-item w3-button w3-padding w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sell Merch</a>
@@ -23,9 +23,9 @@
 
 {% block body %}
 <div class="container">
-<h2 style="font-family:MarkerFelt-Thin">I want to sell some merchandise</h1>
+<h2 style="font-family:MarkerFelt-Thin; color:white;">I want to sell some merchandise</h1>
 <br>
-	<form class="contact-form" method="POST" action="/sell_merch/" enctype='multipart/form-data' style="font-family:MarkerFelt-Thin">
+	<form class="contact-form" method="POST" action="/sell_merch/" enctype='multipart/form-data' style="font-family:MarkerFelt-Thin;color:steelblue">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="login100-form-btn">
@@ -33,22 +33,22 @@
         </button>
     </form>
     <br>
-    <h6>*Optional. Fill only if you want your merch to only be seen by a certain group.</h6>
-    <h6>**Image size of 3:5 is recommended.</h6>
+    <h6 style="color:white">*Optional. Fill only if you want your merch to only be seen by a certain group.</h6>
+    <h6 style="color:white">**Image size of 3:5 is recommended.</h6>
     <br>
 </div>
 
 <hr>
 
 <body class="container">
-<h2 style="font-family: MarkerFelt-Thin">My Merchandise</h2>
+<h2 style="font-family: MarkerFelt-Thin;color:white">My Merchandise</h2>
 <br>
   <div class="w3-row">
     {% for product in listed %}
 
     <div class="w3-col l4 s4">
       <img class="item center thumbnail" src="{{ product.image.url }}">
-      <div class="w3-container">
+      <div class="w3-container" style="color: white;">
         <h6><strong>{{product.name_of_MERCH}}</strong></h6>
         <hr>
         <a class="btn btn-outline-success" href="/product/{{product.id}}/">View</a>

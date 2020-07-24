@@ -36,7 +36,7 @@ var csrftoken = getToken('csrftoken');
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
 
-<body class="w3-content" style="max-width:1200px; background-color: #FAF0E6" >
+<body class="w3-content" style="max-width:1200px; background-color: #202020" >
 {% block content %}
 {% endblock %}
 
@@ -46,7 +46,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">NUSMERCH</div>
+  <div style="color: steelblue;"class="w3-bar-item w3-padding-24 w3-wide">NUSMERCH</div>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
@@ -87,11 +87,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     {% for product in products %}
     <div class="w3-col l4 s4">
       <img class="item center thumbnail" src="{{ product.image.url }}">
-      <div class="w3-container">
-        <h6><strong>{{product.name_of_MERCH}}</strong></h6>
+      <div class="w3-container" style="color:rgb(255, 255, 255);">
+        <h6><strong>  {{product.name_of_MERCH}}</strong></h6>
         <hr>
-        <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart" href="javascript:void(0)" onclick="document.getElementById('cart').style.display='block'">Add to Cart</button>
-        <a class="btn btn-outline-success" href="/product/{{product.id}}/">View</a>
+        <button data-product={{product.id}} data-action="add" style="color:red;" class="btn btn-outline-success add-btn update-cart" href="javascript:void(0)" onclick="document.getElementById('cart').style.display='block'">Add to Cart</button>
+        <a class="btn btn-outline-success" style="color:steelblue;" href="/product/{{product.id}}/">View</a>
         <h6 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h6>
         <hr>
       </div>
@@ -108,8 +108,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </center>
   {% endif %}
   <br/><br/><br/>
-  <footer class="w3-padding-64 w3-tan w3-small w3-center" id="footer">
-    <div class="w3-row-padding">
+  <footer class="w3-padding-64 w3-small w3-center" style="max-width:1400px; background-color: #202020" id="footer">
+    <div class="w3-row-padding" style="color:rgb(255, 255, 255);">
         <h4>Contact</h4>
         <p>Questions? Go ahead and submit your enquiries using the contact form below, we will get back to you shortly.</p>
         <form action ="{% url 'nusmerch:contact' %}" method="post">
@@ -124,8 +124,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
             <div class ="col-12">
               <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn dento-btn">Send Message</button>
+            <div class="col-12" style="color:rgb(255, 255, 255);">
+              <button type="submit" class="btn dento-btn btn-outline-success" style="color:rgb(255, 255, 255);">Send Message</button>
             </div>
           </div>
         </form>

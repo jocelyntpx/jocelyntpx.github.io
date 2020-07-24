@@ -154,6 +154,7 @@ img {max-width: 100%;height: auto;}
 
 /* Colors */
 .w3-tan,.w3-hover-tan:hover{color:#000!important;background-color:#D2B48C!important}
+.w3-greys,.w3-hover-tan:hover{color:#000!important;background-color:#4682b4!important}
 .w3-burlywood,.w3-hover-burlywood:hover{color:#000!important;background-color:#DEB887!important}
 .w3-wheat,.w3-hover-wheat:hover{color:#000!important;background-color:#F5DEB3!important}
 .w3-ghostwhite,.w3-hover-ghostwhite:hover{color:#000!important;background-color:#f8f8ff!important}
@@ -189,6 +190,7 @@ img {max-width: 100%;height: auto;}
 .w3-pale-blue,.w3-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
 .w3-text-amber,.w3-hover-text-amber:hover{color:#ffc107!important}
 .w3-text-aqua,.w3-hover-text-aqua:hover{color:#00ffff!important}
+.w3-text-greys,.w3-hover-text-aqua:hover{color:steelblue!important}
 .w3-text-blue,.w3-hover-text-blue:hover{color:#2196F3!important}
 .w3-text-light-blue,.w3-hover-text-light-blue:hover{color:#87CEEB!important}
 .w3-text-brown,.w3-hover-text-brown:hover{color:#795548!important}

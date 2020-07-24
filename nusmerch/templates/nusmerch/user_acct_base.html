@@ -35,30 +35,30 @@
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
 
-<body class="w3-content" style="max-width:1200px; background-color: #E6E6FA" >
+<body class="w3-content" style="max-width:1200px; background-color: black" >
 {% block content %}
 {% endblock %}
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
         <a href="/shirt/" class="logo w3-wide">NUSMERCH</a>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-black w3-left-align" id="myBtn">
       Apparel  <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="/shirt/" class="w3-bar-item w3-button ">Shirts</a>
-      <a href="/bottom/" class="w3-bar-item w3-button">Bottom</a>
-      <a href="/outerwear/" class="w3-bar-item w3-button">Outerwear</a>
+      <a href="/shirt/" style="color:steelblue;"class="w3-bar-item w3-button ">Shirts</a>
+      <a href="/bottom/" style="color:steelblue;"class="w3-bar-item w3-button">Bottom</a>
+      <a href="/outerwear/" style="color:steelblue;"class="w3-bar-item w3-button">Outerwear</a>
     </div>
 
 
-    <a href="/lifestyle/" class="w3-bar-item w3-button">Lifestyle</a>
-    <a href="/laptop/" class="w3-bar-item w3-button">Laptop Accessories</a>
-    <a href="/others/" class="w3-bar-item w3-button">Others</a>
+    <a href="/lifestyle/" style="color:white;"class="w3-bar-item w3-button">Lifestyle</a>
+    <a href="/laptop/" style="color:white;"class="w3-bar-item w3-button">Laptop Accessories</a>
+    <a href="/others/" style="color:white;"class="w3-bar-item w3-button">Others</a>
   </div>
 
 {% block menu2 %}

@@ -41,23 +41,21 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	</title>
 
 </header>
-<body class="w3-content" style="max-width:1200px" >
+<body class="w3-content" style="max-width:1200px; background-color:black;">
 
-
-{% block content %}
-    <h2 style="color: black">Shopping Cart</h2>
+    <h2 style="color: white">Shopping Cart</h2>
 	<div class="row">
 		<div class="col-lg-12">
-			<div class="box-element">
+			<div class="box-element" style="background-color: #202020;">
 
-				<a  class="btn btn-outline-dark" href="/shirt/">&#x2190; Continue Shopping</a>
+				<a  class="btn btn-outline-success"style="color:steelblue" href="/shirt/">&#x2190; Continue Shopping</a>
 
 				<br>
 				<br>
 				<table class="table">
 					<tr>
-						<th><h5>Items: <strong>{{order.get_cart_items}}</strong></h5></th>
-						<th><h5>Total:<strong> {{order.get_cart_total}}</strong></h5></th>
+						<th><h5 style="color:steelblue">Items: <strong style="color:white">{{order.get_cart_items}}</strong></h5></th>
+						<th><h5 style="color:steelblue">Total:<strong style="color:white"> {{order.get_cart_total}}</strong></h5></th>
 						<th>
 							
 						</th>
@@ -67,22 +65,22 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 			</div>
 
 			<br>
-			<div class="box-element">
+			<div class="box-element" style="background-color: #202020;">
 				<div class="cart-row">
 					<div style="flex:2"></div>
-					<div style="flex:2"><strong>Item</strong></div>
-					<div style="flex:1"><strong>Price</strong></div>
-					<div style="flex:1"><strong>Quantity</strong></div>
+					<div style="flex:2"><strong style="color:white">Item</strong></div>
+					<div style="flex:1"><strong style="color:white">Price</strong></div>
+					<div style="flex:1"><strong style="color:white">Quantity</strong></div>
                     <div style="flex:1"><strong></strong></div>
                     <div style="flex:1"><strong></strong></div>
 				</div>
 				{% for item in items %}
 				<div class="cart-row">
 					<div style="flex:2"><img class="row-image" src="{{item.product.image.url}} " width="100"></div>
-					<div style="flex:2"><p>{{item.product.name_of_MERCH}}</p></div>
-					<div style="flex:1"><p>{{item.product.price}}</p></div>
+					<div style="flex:2"><p style="color:white">{{item.product.name_of_MERCH}}</p></div>
+					<div style="flex:1"><p style="color:white">{{item.product.price}}</p></div>
 					<div style="flex:1">
-						<p class="quantity">{{item.quantity}}</p>
+						<p class="quantity" style="color:white" >{{item.quantity}}</p>
 						<div class="quantity">
 							<img data-product="{{item.product.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}"width="20">
 					
@@ -91,7 +89,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 					</div>
 				<button style="flex:1" data-product="{{item.product.id}}" data-action="removeAll" class="btn btn-outline-danger add-btn update-cart" ><p>Remove Item</p></button>
 			
-                <button style="flex:1;overflow:hidden;" class="btn btn-outline-success" > <a target=_blank title="Buy Now" {{item.product.form|urlize}}  ></a><p>Buy Now</p></button>
+                <button style="flex:1;overflow:hidden;" class="btn btn-outline-success" > <a target=_blank style="color: steelblue;" title="Buy Now" {{item.product.form|urlize}}  ></a><p>Buy Now</p></button>
 
 				</div>
 				{% endfor %}
@@ -99,7 +97,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 			</div>
 		</div>
 	</div>
-{% endblock content %}
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 

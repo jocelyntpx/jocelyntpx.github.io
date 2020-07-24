@@ -7,13 +7,13 @@
 {% endblock %}
 
 {% block menu2 %}
-    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-greys w3-left-align" id="myBtn">
       User Account  <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="{% url 'nusmerch:view_profile' %}" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Profile Details</a>
-      <a href="{% url 'nusmerch:edit_profile' %}" class="w3-bar-item w3-button">Edit Profile</a>
-      <a href="{% url 'nusmerch:change_password' %}" class="w3-bar-item w3-button">Change Password</a>
+      <a href="{% url 'nusmerch:view_profile' %}" class="w3-bar-item w3-button w3-greys"><i class="fa fa-caret-right w3-margin-right"></i>Profile Details</a>
+      <a href="{% url 'nusmerch:edit_profile' %}" style="color:steelblue;"class="w3-bar-item w3-button">Edit Profile</a>
+      <a href="{% url 'nusmerch:change_password' %}" style="color:steelblue;"class="w3-bar-item w3-button">Change Password</a>
     </div>
 
     <a href="/sell_merch/" class="w3-bar-item w3-button w3-padding">Sell Merch</a>
@@ -25,7 +25,7 @@
 
         <!--Grid column-->
         <div class="col-md-6 mb-4">
-          <h1 style="font-family: MarkerFelt-thin">My Profile</h1>
+          <h1 style="font-family: MarkerFelt-thin;color: white;">My Profile</h1>
         <br>
           {% if user.userinfo.image %}
           <img src="{{ user.userinfo.image.url }}" width="340">
@@ -39,7 +39,7 @@
         <div class="col-md-6 mb-4">
       
           <!--Content-->
-          <div class="p-4" style="color:rgb(31, 111, 185);">
+          <div class="p-4" style="color:white;">
             <br>
             <br>
             <br>
