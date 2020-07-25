@@ -34,6 +34,7 @@ urlpatterns = [
 	url(r'^home_page/$',views.home_page,name='home_page'),
     url(r'^about_page/$', views.about_page, name='about_page'),
     url(r'^login/$', LoginView.as_view(template_name='nusmerch/login.html'), name="login"),
+    url(r'^nusmerch/login/$', LoginView.as_view(template_name='nusmerch/login.html'), name="login"),
     url(r'^logged_in/$',views.logged_in,name='logged_in'),
     url(r'^logout/$', LogoutView.as_view(template_name='nusmerch/index.html'), name="logout"),
     url(r'^profile/(?P<pk>\d+)/$', views.view_profile, name='view_profile_with_pk'),
@@ -46,7 +47,7 @@ urlpatterns = [
     url(r'^password/reset/$', PasswordResetView.as_view(template_name='nusmerch/reset_password.html'), name='reset_password'),
     url(r'^reset-password/done/$', PasswordResetDoneView.as_view(template_name='nusmerch/reset_password_done.html'), name='password_reset_done'),
     url(r'^reset-password/confirm/<uidb64>/<token>/$', PasswordResetConfirmView.as_view(template_name='nusmerch/reset_password_confirm.html'), name='password_reset_confirm'),
-    url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_complete'),
+    url(r'^reset-password/complete/$', PasswordResetCompleteView.as_view(template_name='nusmerch/reset_password_complete.html'), name='password_reset_completed'),
 
     url(r'^merch/$',views.merch,name='merch'),
     url(r'^contact/$',views.contact,name='contact'),
