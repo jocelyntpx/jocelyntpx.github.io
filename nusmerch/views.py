@@ -455,7 +455,7 @@ def contact(request):
 
             #send mail
             email = EmailMessage(
-                'Enquiry from ' + message_name,
+                'Enquiry from ' + message_name + ' ' + message_email,,
                 message,
                 message_email,
                 [settings.EMAIL_HOST_USER],

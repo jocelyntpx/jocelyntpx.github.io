@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="" />
+    <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/user_acct_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,9 +164,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="514" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595420100659">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state x="514" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595697639654">
+      <screen x="0" y="23" width="1440" height="809" />
     </state>
+    <state x="514" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.809@0.23.1440.809" timestamp="1595697639654" />
     <state x="514" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.811@0.23.1440.811" timestamp="1595420100659" />
     <state x="904" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595419571173">
       <screen x="0" y="23" width="1440" height="811" />
