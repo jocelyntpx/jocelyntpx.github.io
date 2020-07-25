@@ -106,7 +106,7 @@ def activate(request, uidb64, token):
         # return redirect('home')
         return render(request, 'nusmerch/acct_verified.html')
     else:
-        return render(request, 'nusmerch/invalid_link.html')
+        return render(request, 'nusmerch/acct_verified.html')
 
 
 def login_form_submission(request):
