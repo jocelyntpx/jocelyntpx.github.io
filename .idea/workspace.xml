@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/nusmerch/templates/nusmerch/acct_verified.html" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/templates/nusmerch/acct_verified.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nusmerch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nusmerch/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b5b123ce-c506-435c-8aad-5c8e204f5b2e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +141,7 @@
       <workItem from="1595480999940" duration="7413000" />
       <workItem from="1595574853784" duration="6377000" />
       <workItem from="1595609515667" duration="3534000" />
-      <workItem from="1595658220838" duration="292000" />
+      <workItem from="1595658220838" duration="753000" />
     </task>
     <servers />
   </component>
